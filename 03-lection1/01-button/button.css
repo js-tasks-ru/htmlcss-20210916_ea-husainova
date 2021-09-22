@@ -1,31 +1,41 @@
 /* Стилизация кнопки */
 
+:root {
+    --royal-blue: #4263eb;
+    --persian-blue: #2342c0;
+    --purple-heart: #5028c6;
+}
+
 button {
     width: 189px;
     height: 48px;
     border: none;
     border-radius: 8px;
     color: var(--white);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    line-height: 18.75px;
+    cursor: pointer;
 } 
 
 button:disabled {
     opacity: 0.5;
-}
-
-button:hover{
-    cursor: pointer;
+    pointer-events: none;
 }
 
 .button__primary {
-    background-color: #4263eb;
+    background-color: var(--royal-blue);
 }
 
 .button__primary:hover {
-    background-color: #2342c0;
+    background-color: var(--persian-blue);
 }
 
 .button__primary_disabled:disabled {
-    background-color: #4263eb;
+    background-color: var(--royal-blue);
     color: var(--white);
 }
 
@@ -34,11 +44,11 @@ button:hover{
 }
 
 .button__secondary:hover {
-    background-color: #5028c6;
+    background-color: var(--purple-heart);
 }
 
 .button__secondary_disabled:disabled {
-    background-color: #5028c6;
+    background-color: var(--purple-heart);
 }
 
 .button__alternate {
