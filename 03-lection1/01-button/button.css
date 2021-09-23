@@ -17,7 +17,7 @@ button {
     font-weight: 500;
     font-style: normal;
     text-align: center;
-    line-height: 18.75px;
+    line-height: 18px;
     cursor: pointer;
 } 
 
@@ -26,42 +26,42 @@ button:disabled {
     pointer-events: none;
 }
 
-.button__primary {
+.button_primary {
     background-color: var(--royal-blue);
 }
 
-.button__primary:hover {
+.button_primary:hover {
     background-color: var(--persian-blue);
 }
 
-.button__primary_disabled:disabled {
+.button_primary:disabled {
     background-color: var(--royal-blue);
     color: var(--white);
 }
 
-.button__secondary {
+.button_secondary {
     background-color: var(--purple);
 }
 
-.button__secondary:hover {
+.button_secondary:hover {
     background-color: var(--purple-heart);
 }
 
-.button__secondary_disabled:disabled {
+.button_secondary:disabled {
     background-color: var(--purple-heart);
 }
 
-.button__alternate {
+.button_alternate {
     color: var(--grey-4);
     border: 1px solid var(--grey-3);
     background-color: var(--white);
 }
 
-.button__alternate:hover {
+.button_alternate:hover {
     border-color: var(--black);
 }
 
-.button__alternate_disabled:disabled {
+.button_alternate:disabled {
     color: var(--grey-4);
     border: 1px solid var(--grey-3);
 }
