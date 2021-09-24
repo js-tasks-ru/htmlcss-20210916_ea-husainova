@@ -1,9 +1,5 @@
 /* Стилизация аккордеона */
 
-:root {
-    --black-black: #000000;
-}
-
 .accordion {
     width: 730px;
 }
@@ -13,7 +9,7 @@
     border-radius: 8px;
     box-sizing: border-box;
     margin-bottom: 8px;
-    padding: 20px;
+    padding: 24px 32px;
 }
 
 .accordion__item:last-child {
