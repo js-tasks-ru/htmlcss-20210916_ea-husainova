@@ -1,12 +1,6 @@
 /* Стилизация кнопки */
 
-:root {
-    --royal-blue: #4263eb;
-    --persian-blue: #2342c0;
-    --purple-heart: #5028c6;
-}
-
-button {
+.button {
     width: 189px;
     height: 48px;
     border: none;
@@ -21,7 +15,7 @@ button {
     cursor: pointer;
 } 
 
-button:disabled {
+.button:disabled {
     opacity: 0.5;
     pointer-events: none;
 }
