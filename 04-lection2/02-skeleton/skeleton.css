@@ -1,0 +1,61 @@
+.card {
+    border: 1px solid var(--grey-3);
+    border-radius: 8px;
+    width: 579px;
+    height: 192px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.sceleton_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 24px;
+    margin-top: 32px;
+    align-items: center;
+}
+
+.sceleton_body {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-top: 20px;
+}
+
+.info_placeholder {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.portrait_placeholder {
+    background-color: var(--grey-2);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.name_placeholder {
+    width: 172px;
+    height: 20px;
+    background: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
+    margin-Bottom: 10px;
+}
+
+.contacts_placeholder {
+    width: 257px;
+    height: 20px;
+    background: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
+}
+
+.description_placeholder {
+    width: 515px;
+    height: 20px;
+    background: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
+}
+
+.description_placeholder:first-child {
+    margin-bottom: 10px;;
+}
