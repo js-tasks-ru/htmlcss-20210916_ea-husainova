@@ -2,18 +2,15 @@
     border: 1px solid var(--grey-3);
     border-radius: 8px;
     width: 354px;
-    height: 185px;
     display: flex;
     flex-direction: column;
+    padding: 16px 24px 24px;
 }
 
 .histogram__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 16px;
-    padding-left: 24px;
-    padding-right: 24px;
 }
 
 .header__orders {
@@ -35,7 +32,6 @@
 }
 
 .header__counter {
-    padding-left: 24px;
     font-family: Inter;
     font-weight: 400;
     font-style: normal;
@@ -45,18 +41,18 @@
 }
 
 .histogram__chart {
-    height: 100px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    padding: 26px 29px 24px 26px;
-    margin-top: 20px;
+    margin-top: 39px;
 }
 
 .chart__column {
     background-color: var(--royal-blue);
     margin-top: auto;
     margin-right: 1px;
+    flex-basis: 281px;
     flex-grow: 1;
 }
 
