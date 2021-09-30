@@ -14,3 +14,11 @@
     text-align: center;
     margin-bottom: 30px;
 }
+
+.preview__card {
+    width: 33.3333%;
+    flex-basis: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
