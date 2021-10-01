@@ -58,7 +58,3 @@
 .calendar__item_selection {
     background-color: rgba(160, 177, 245, 0.2);
 }
-
-.calendar__item:nth-child(8) {
-    grid-column: 5;
-}
