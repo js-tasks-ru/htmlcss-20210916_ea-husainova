@@ -8,8 +8,19 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
 }
 
 .preview__card {
     flex-basis: 350px;
+}
+
+@media (max-width: 768px) {
+    .preview__box {
+        gap: 15px;
+    }
+
+    .preview__card {
+        flex-basis: 240px;
+    }
 }
