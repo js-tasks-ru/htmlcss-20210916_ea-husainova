@@ -42,3 +42,19 @@
     text-transform: uppercase;
     color: var(--grey-3)
 }
+
+@media (max-width: 768px) {
+    .page {
+        grid-template-columns: 0px 0px 1fr 0px;
+        grid-template-rows: 1fr 10fr;
+        background-color: var(--white);
+    }
+    
+    .page__header {
+        background-color: var(--alice-blue);
+    }
+
+    .page__footer {
+        display: none;
+    }
+}
