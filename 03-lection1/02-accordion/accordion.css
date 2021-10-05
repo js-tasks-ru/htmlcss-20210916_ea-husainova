@@ -40,8 +40,32 @@
 
 .accordion__summary {
     display: block;
+    position: relative;
 }
 
 .accordion__summary::-webkit-details-marker {
     display: none;
+}
+
+.summary__arrow {
+    width: 18px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    animation: crotation .5s;
+}
+
+.accordion__item[open] .summary__arrow {
+    animation: rotation .5s;
+    transform: rotate(180deg);
+}
+
+@keyframes rotation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-180deg);}
+}
+
+@keyframes crotation {
+    0% {transform: rotate(-180deg);}
+    100% {transform: rotate(0deg);}
 }
