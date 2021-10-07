@@ -6,6 +6,45 @@
         <link rel="stylesheet" href="./input.css">
     </head>
     <body>
-
+        <label class="text">
+            <input type="text" class="text__input" placeholder="Placeholder">
+            <div class="text__state">
+                <div class="text__field">
+                    <p class="field__text">Placeholder</p></div>
+                <div class="text__label">Label</div>
+            </div>
+        </label>
+        <label class="text">
+            <input type="text" class="text__input text__input_success">
+            <div class="text__state">
+                <div class="text__field">
+                    <p class="field__text">Success</p>
+                    <svg class="text__icon">
+                        <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                    </svg> 
+                </div>
+                <div class="text__label">Success</div>
+            </div>
+        </label>
+        <label class="text">
+            <input type="text" class="text__input" autofocus>
+            <div class="text__state">
+                <div class="text__field">
+                    <p class="field__text">Filled Input</p></div>
+                <div class="text__label">Focus</div>
+            </div>
+        </label>
+        <label class="text">
+            <input type="text" class="text__input text__input_invalid">
+            <div class="text__state">
+                <div class="text__field">
+                    <p class="field__text">Error</p>
+                    <svg class="text__icon">
+                        <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                    </svg> 
+                </div>
+                <div class="text__label">Error</div>
+            </div>
+        </label>
     </body>
 </html>
