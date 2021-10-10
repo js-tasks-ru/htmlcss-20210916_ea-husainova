@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="./components/card/card.css">
         <link rel="stylesheet" href="./components/footer/footer.css">
         <link rel="stylesheet" href="./components/logo/logo.css">
+        <link rel="stylesheet" href="./components/tabs/tabs.css">
     </head>
     <body>
         <div class="page">
@@ -24,25 +25,68 @@
                     <h1 class="header__title">Reusable component library</h1>
                 </div>
             </header>
-            <main class="preview">
-                <div class="page__box preview__box">
-                    <div class="card preview__card">
-                        <div class="card__text">Tooltip</div>
+            <main class="tabs">
+                <input type="radio" id="#all-tab" name="nav" class="tabs__input tabs__input_all" checked>
+                <input type="radio" id="#atoms-tab" name="nav" class="tabs__input tabs__input_atoms">
+                <input type="radio" id="#molecules-tab" name="nav" class="tabs__input tabs__input_molecules">
+                <input type="radio" id="#organisms-tab" name="nav" class="tabs__input tabs__input_organisms">
+                <div class="tabs__nav page__box">
+                    <label for="#all-tab" class="nav__label nav__label_all">All components</label>
+                    <label for="#atoms-tab" class="nav__label nav__label_atoms">Atoms</label>
+                    <label for="#molecules-tab" class="nav__label nav__label_molecules">Molecules</label>
+                    <label for="#organisms-tab" class="nav__label nav__label_organisms">Organisms</label>
+                </div>
+
+                <div class="tabs__content tabs__content_all preview">
+                    <div class="page__box preview__box">
+                        <div class="card preview__card">
+                            <div class="card__text">Tooltip</div>
+                        </div>
+                        <div class="card preview__card">
+                            <div class="card__text">Custom form elements</div>
+                        </div>
+                        <div class="card preview__card">
+                            <div class="card__text">Calendar</div>
+                        </div>
+                        <div class="card preview__card">
+                            <div class="card__text">Modal dialog</div>
+                        </div>
+                        <div class="card preview__card">
+                            <div class="card__text">Histogram</div>
+                        </div>
+                        <div class="card preview__card">
+                            <div class="card__text">Avatar</div>
+                        </div>
                     </div>
-                    <div class="card preview__card">
-                        <div class="card__text">Custom form elements</div>
+                </div>
+                <div class="tabs__content tabs__content_atoms preview">
+                    <div class="page__box preview__box">
+                        <div class="card preview__card">
+                            <div class="card__text">Tooltip</div>
+                        </div>
+                        <div class="card preview__card">
+                            <div class="card__text">Avatar</div>
+                        </div>
                     </div>
-                    <div class="card preview__card">
-                        <div class="card__text">Calendar</div>
+                </div>
+                <div class="tabs__content tabs__content_molecules preview">
+                    <div class="page__box preview__box">
+                        <div class="card preview__card">
+                            <div class="card__text">Custom form elements</div>
+                        </div>
+                        <div class="card preview__card">
+                            <div class="card__text">Calendar</div>
+                        </div>
                     </div>
-                    <div class="card preview__card">
-                        <div class="card__text">Modal dialog</div>
-                    </div>
-                    <div class="card preview__card">
-                        <div class="card__text">Histogram</div>
-                    </div>
-                    <div class="card preview__card">
-                        <div class="card__text">Avatar</div>
+                </div>
+                <div class="tabs__content tabs__content_organisms preview">
+                    <div class="page__box preview__box">
+                        <div class="card preview__card">
+                            <div class="card__text">Modal dialog</div>
+                        </div>
+                        <div class="card preview__card">
+                            <div class="card__text">Histogram</div>
+                        </div>
                     </div>
                 </div>
             </main>
