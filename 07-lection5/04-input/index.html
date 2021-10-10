@@ -2,49 +2,50 @@
 <!-- Страница с полем ввода -->
 <html lang="ru">
     <head>
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./input.css">
     </head>
     <body>
-        <label class="text">
-            <input type="text" class="text__input" placeholder="Placeholder">
-            <div class="text__state">
-                <div class="text__field">
-                    <p class="field__text">Placeholder</p></div>
-                <div class="text__label">Label</div>
-            </div>
+        <label class="form-group">
+            <div class="form-group__title">Label</div>
+            <input type="text" class="form-group__input" placeholder="Placeholder">
+            <svg class="form-group__icon form-group__icon_success">
+                <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+            </svg>
+            <svg class="form-group__icon form-group__icon_error">
+                <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+            </svg> 
         </label>
-        <label class="text">
-            <input type="text" class="text__input text__input_success">
-            <div class="text__state">
-                <div class="text__field">
-                    <p class="field__text">Success</p>
-                    <svg class="text__icon">
-                        <use xlink:href="../../assets/icons/icons.svg#success"></svg>
-                    </svg> 
-                </div>
-                <div class="text__label">Success</div>
-            </div>
+        <label class="form-group">
+            <div class="form-group__title">Success</div>
+            <input type="text" class="form-group__input form-group__input_success" placeholder="Success">
+            <svg class="form-group__icon form-group__icon_success">
+                <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+            </svg>
+            <svg class="form-group__icon form-group__icon_error">
+                <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+            </svg> 
         </label>
-        <label class="text">
-            <input type="text" class="text__input" autofocus>
-            <div class="text__state">
-                <div class="text__field">
-                    <p class="field__text">Filled Input</p></div>
-                <div class="text__label">Focus</div>
-            </div>
+        <label class="form-group">
+            <div class="form-group__title">Focus</div>
+            <input type="text" class="form-group__input" placeholder="Filled Input" autofocus>
+            <svg class="form-group__icon form-group__icon_success">
+                <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+            </svg>
+            <svg class="form-group__icon form-group__icon_error">
+                <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+            </svg> 
         </label>
-        <label class="text">
-            <input type="text" class="text__input text__input_invalid">
-            <div class="text__state">
-                <div class="text__field">
-                    <p class="field__text">Error</p>
-                    <svg class="text__icon">
-                        <use xlink:href="../../assets/icons/icons.svg#error"></svg>
-                    </svg> 
-                </div>
-                <div class="text__label">Error</div>
-            </div>
+        <label class="form-group">
+            <div class="form-group__title">Error</div>
+            <input type="text" class="form-group__input form-group__input_invalid" placeholder="Error">
+            <svg class="form-group__icon form-group__icon_success">
+                <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+            </svg>
+            <svg class="form-group__icon form-group__icon_error">
+                <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+            </svg> 
         </label>
     </body>
 </html>

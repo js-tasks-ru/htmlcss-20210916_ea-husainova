@@ -1,24 +1,9 @@
-.text {
+.form-group {
     display: inline-block;
+    position: relative;
 }
 
-.text__input {
-    width: 0;
-    height: 0;
-    opacity: 0;
-    outline: none;
-    position: absolute;
-    clip: rect(0 0 0 0);
-}
-
-.text__state {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-
-}
-
-.text__label {
+.form-group__title {
     font-family: Inter;
     font-weight: 500;
     font-style: normal;
@@ -27,57 +12,47 @@
     text-transform: uppercase;
 }
 
-.text__field {
+.form-group__input {
     width: 350px;
     height: 56px;
     border: 1px solid var(--grey-2);
     border-radius: 8px;
     box-sizing: border-box;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.field__text {
-    font-family: Inter;
+    appearance: none;
+    outline: none;
+    font-family: Inter, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
     color: var(--grey-2);
-    margin-left: 24px;
+    padding-left: 24px;
 }
 
-.text__input:focus ~ .text__state .field__text,
-.text__input_success ~ .text__state .field__text,
-.text__input_invalid ~ .text__state .field__text {
-    color: var(--grey-4);
+.form-group__input_invalid {
+    border-color: var(--red);
 }
 
-.text__icon {
+.form-group__input:focus {
+    outline: none;
+    border-color: var(--royal-blue);
+}
+
+.form-group__icon {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 95%;
-    transform: translate(-95%, -50%);
+    transform: translate(-95%, -55%);
     width: 24px;
     height: 24px;
-    color: var(--white);
     display: none;
 }
 
-.text__input:focus ~ .text__state .text__field {
-    border: 1px solid var(--royal-blue);
-}
-
-.text__input_success ~ .text__state .text__icon {
+.form-group__input_success ~ .form-group__icon_success {
     display: block;
     color: var(--free-speech-blue);
 }
 
-.text__input_invalid ~ .text__state .text__icon {
+.form-group__input_invalid ~ .form-group__icon_error {
     display: block;
     color: var(--red);
-}
-
-.text__input_invalid:focus ~ .text__state .text__field {
-    border: 1px solid var(--red);
 }
