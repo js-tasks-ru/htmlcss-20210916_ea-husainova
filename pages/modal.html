@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="../pages/template.css">
         <link rel="stylesheet" href="../components/nav/nav.css">
         <link rel="stylesheet" href="../components/logo/logo.css">
+        <link rel="stylesheet" href="../assets/css/button.css">
+        <link rel="stylesheet" href="../components/modal/modal.css">
     </head>
     <body>
         <div class="page">
@@ -21,21 +23,36 @@
             <div class="page__spacing"></div>
             <div class="page__nav">
                 <div class="nav__item nav__item_title">Components</div>
-                <div class="nav__item">Modal</div>
+                <div class="nav__item nav__item_active">Modal</div>
                 <div class="nav__item">Tooltip</div>
                 <div class="nav__item">Avatar</div>
                 <div class="nav__item">Calendar</div>
-                <div class="nav__item nav__item_active">Histogram</div>
+                <div class="nav__item">Histogram</div>
                 <div class="nav__item">Custom form elements</div>
                 <div class="nav__item nav__item_back">Main page</div>
             </div>
             <div class="page__content">
-                <div class="content__title">Histogram</div>
-                <div class="content__component"></div>
+                <div class="content__title">Modal</div>
+                <div class="content__component">
+                    <button class="button button_primary" id="modal-open">Open modal</button>
+                    <div class="modal" id="modal">
+                        <div class="modal__content">
+                            <h3 class="modal__title">Modal title</h3>
+                            <p class="modal__description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.Velit officia consequat duis enim velit mollit.
+                                Exercitation veniam consequat sunt nostrud amet.</p>
+                            <svg class="modal__button" id="modal-close">
+                                <use xlink:href="../../assets/icons/icons.svg#cross"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="page__spacing"></div>
             <div class="page__footer">Reusable component library</div>
             </div>
         </div>
+        <script src="../assets/scripts/modal.js"></script> 
     </body>
 </html>
