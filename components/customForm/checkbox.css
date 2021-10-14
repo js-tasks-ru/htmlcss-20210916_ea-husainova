@@ -68,3 +68,11 @@
 .checkbox__input:focus ~ .checkbox__state .checkbox__label {
     text-decoration: underline;
 }
+
+.checkbox__grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    grid-gap: 20px;
+}
