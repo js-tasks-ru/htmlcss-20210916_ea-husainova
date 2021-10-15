@@ -1,9 +1,9 @@
-.radio {
+.checkbox {
     display: inline-block;
     cursor: pointer;
 }
 
-.radio__input {
+.checkbox__input {
     width: 0;
     height: 0;
     opacity: 0;
@@ -12,13 +12,13 @@
     clip: rect(0 0 0 0);
 }
 
-.radio__state {
+.checkbox__state {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.radio__label {
+.checkbox__label {
     font-family: Inter;
     font-weight: 400;
     font-style: normal;
@@ -27,44 +27,52 @@
     margin-left: 12px;
 }
 
-.radio__control {
+.checkbox__control {
     width: 28px;
     height: 28px;
     border: 1px solid var(--grey-2);
-    border-radius: 14px;
+    border-radius: 4px;
     box-sizing: border-box;
     position: relative;
 }
 
-.control__circle {
-    width: 18px;
-    height: 18px;
-    border-radius: 14px;
-    background-color: var(--royal-blue);
+.checkbox__icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 18px;
+    height: 13px;
+    color: var(--white);
     display: none;
 }
 
-.radio__input:checked ~ .radio__state .radio__control {
-    border: 2px solid var(--royal-blue);
+.checkbox__input:checked ~ .checkbox__state .checkbox__control {
+    background-color: var(--royal-blue);
+    border-color: var(--royal-blue);
 }
 
-.radio__input:checked ~ .radio__state .control__circle {
+.checkbox__input:checked ~ .checkbox__state .checkbox__icon {
     display: block;
 }
 
-.radio__input:disabled ~ .radio__state .radio__control {
+.checkbox__input:disabled ~ .checkbox__state .checkbox__control {
     background-color: var(--grey-2);
     border-color: var(--grey-2);
 }
 
-.radio__input:disabled ~ .radio__state .radio__label {
+.checkbox__input:disabled ~ .checkbox__state .checkbox__label {
     color: var(--grey-2);
 }
 
-.radio__input:focus ~ .radio__state .radio__label {
+.checkbox__input:focus ~ .checkbox__state .checkbox__label {
     text-decoration: underline;
+}
+
+.checkbox__grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    grid-gap: 20px;
 }

@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../pages/template.css">
         <link rel="stylesheet" href="../components/nav/nav.css">
         <link rel="stylesheet" href="../components/logo/logo.css">
+        <link rel="stylesheet" href="../components/tooltip/tooltip.css">
     </head>
     <body>
         <div class="page">
@@ -22,15 +23,22 @@
             <div class="page__nav">
                 <div class="nav__item nav__item_title">Components</div>
                 <div class="nav__item">Modal</div>
-                <div class="nav__item">Tooltip</div>
+                <div class="nav__item nav__item_active">Tooltip</div>
                 <div class="nav__item">Avatar</div>
                 <div class="nav__item">Calendar</div>
-                <div class="nav__item nav__item_active">Histogram</div>
+                <div class="nav__item">Histogram</div>
                 <div class="nav__item">Custom form elements</div>
             </div>
             <div class="page__content">
-                <div class="content__title">Histogram</div>
-                <div class="content__component"></div>
+                <div class="content__title">Tooltip</div>
+                <div class="content__component content__component_tooltip">
+                    <div class="tooltip">
+                        <svg class="tooltip__icon" width="24" height="24">
+                            <use xlink:href="../assets/icons/icons.svg#questionmark"></use>
+                        </svg>
+                        <div class="tooltip__help">Helper Text</div>
+                    </div>
+                </div>
             </div>
             <div class="page__spacing"></div>
             <div class="page__footer">Reusable component library</div>

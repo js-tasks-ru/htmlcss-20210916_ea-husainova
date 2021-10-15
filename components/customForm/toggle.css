@@ -37,10 +37,10 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 1px;
+    padding: 2px;
 }
 
-.control__circle {
+.toggler__circle {
     width: 24px;
     height: 24px;
     border-radius: 16px;
@@ -53,7 +53,7 @@
     justify-content: flex-end;
 }
 
-.toggler__input:checked ~ .toggler__state .control__circle {
+.toggler__input:checked ~ .toggler__state .toggler__circle {
     background-color: var(--white);
 }
 
@@ -63,7 +63,7 @@
     border-color: var(--grey-2);
 }
 
-.toggler__input:disabled ~ .toggler__state .control__circle {
+.toggler__input:disabled ~ .toggler__state .toggler__circle {
     background-color: var(--grey-3);
 }
 
