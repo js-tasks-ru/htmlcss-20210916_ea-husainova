@@ -20,6 +20,11 @@
     margin-right: auto;
 }
 
+html[data-theme-dark] .footer__title,
+html[data-theme-dark] .footer__description {
+    color: var(--white-transparent);
+}
+
 @media (max-width: 768px) {
     .footer__description {
         width: 350px;

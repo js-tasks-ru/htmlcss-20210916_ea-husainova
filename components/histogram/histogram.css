@@ -28,6 +28,10 @@
     line-height: 24px;
 }
 
+html[data-theme-dark] .header__orders {
+    color: var(--grey-3);
+}
+
 .header__view-control {
     font-family: "Inter", sans-serif;
     font-weight: 400;
@@ -44,6 +48,10 @@
     font-size: 20px;
     color: var(--black);
     line-height: 26px;
+}
+
+html[data-theme-dark] .header__counter {
+    color: var(--white);
 }
 
 .histogram__chart {

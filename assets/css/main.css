@@ -2,6 +2,7 @@
 
 :root {
     --white: #ffffff;
+    --white-transparent: #ffffff75;
     --black: #212429;
     --black-black: #000000;
     --pink: #F784AD;
@@ -11,6 +12,7 @@
     --royal-blue: #4263eb;
     --persian-blue: #2342c0;
     --free-speech-blue: #374FC7;
+    --cornflower-blue: #708AF0;
     --rock-blue: #90A0B7;
     --alice-blue: #F9FAFC;
     --red: #F03D3E;

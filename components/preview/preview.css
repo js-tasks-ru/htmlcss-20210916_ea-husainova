@@ -3,6 +3,10 @@
     padding: 68px 0;
 }
 
+html[data-theme-dark] .preview {
+    background-color: var(--grey-4);
+}
+
 .preview__box {
     display: flex;
     flex-direction: row;
