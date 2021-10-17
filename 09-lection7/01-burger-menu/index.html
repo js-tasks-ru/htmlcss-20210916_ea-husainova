@@ -6,21 +6,28 @@
         <link rel="stylesheet" href="../../assets/css/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./burger-menu.css">
+        <link rel="stylesheet" href="./burger-menu-opener.css">
         <link rel="stylesheet" href="../../components/customForm/toggle.css">
         <link rel="stylesheet" href="../../components/logo/logo.css">
         <script defer src="./burger-menu.js"></script>
+        <style>
+            .page__box {
+                position: relative;
+                margin-top: 16px;
+            }
+        </style>
     </head>
     <body>
-        <div class="page__box">
-            <button class="burger-menu__button burger-menu__button_open" id="burger-menu-open">
+        <div class="page__box burger-menu-opener">
+            <button class="burger-menu-opener__button" id="burger-menu-open">
                 <svg class="menu__icon" id="menu">
                     <use xlink:href="../../assets/icons/icons.svg#menu"></use>
                 </svg>
             </button>
-            <div class="header__logo logo__wrapper">
-                <div class="logo__square"></div>
-                <div class="logo__circle"></div>
-                <div class="logo__triangle"></div>
+            <div class="burger-menu-opener__logo">
+                <svg class="logo__image">
+                    <use xlink:href="../../assets/icons/icons.svg#logo"></use>
+                </svg>
             </div>
         </div>
         <div class="burger-menu" id="burger-menu">
@@ -31,15 +38,15 @@
                             <use xlink:href="../../assets/icons/icons.svg#crossBurger"></use>
                         </svg>
                     </button>
-                    <div class="header__logo logo__wrapper">
-                        <div class="logo__square"></div>
-                        <div class="logo__circle"></div>
-                        <div class="logo__triangle"></div>
+                    <div class="burger-menu__logo">
+                        <svg class="logo__image">
+                            <use xlink:href="../../assets/icons/icons.svg#logo"></use>
+                        </svg>
                     </div>
                 </div>
             </div>
             <div class="burger-menu__body">
-                <div class="body__header">
+                <div class="body__section">
                     <div class="header__title">Dark mode</div>
                     <label class="toggler">
                         <input type="checkbox" class="toggler__input">
@@ -50,15 +57,15 @@
                         </div>
                     </label>
                 </div>
-                <div class="body__content">
-                    <h4 class="content__title">Components</h4>
-                    <div class="content__text">Modal</div>
-                    <div class="content__text content__text_active">Tooltip</div>
-                    <div class="content__text">Avatar</div>
-                    <div class="content__text">Calendar</div>
-                    <div class="content__text">Histogram</div>
-                    <div class="content__text">Custom form elements</div>
-                    <div class="content__text content__text_back">Main page</div>
+                <div class="body__section">
+                    <h4 class="burger-menu__section-title">Components</h4>
+                    <a href="#" class="section__link">Modal</a>
+                    <a href="#" class="section__link section__link_active">Tooltip</a>
+                    <a href="#" class="section__link">Avatar</a>
+                    <a href="#" class="section__link">Calendar</a>
+                    <a href="#" class="section__link">Histogram</a>
+                    <a href="#" class="section__link">Custom form elements</a>
+                    <a href="#" class="section__link section__link_back">Main page</a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,9 @@
+.burger-menu-opener__logo {
+    display: flex;
+    justify-content: center;
+}
+
+.burger-menu-opener__button {
+    position: absolute;
+    left: 12px;
+}
