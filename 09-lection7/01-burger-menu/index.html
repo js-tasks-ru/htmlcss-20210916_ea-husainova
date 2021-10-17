@@ -2,11 +2,65 @@
 <!-- Страница бургер-меню -->
 <html lang="ru">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./burger-menu.css">
+        <link rel="stylesheet" href="../../components/customForm/toggle.css">
+        <link rel="stylesheet" href="../../components/logo/logo.css">
         <script defer src="./burger-menu.js"></script>
     </head>
     <body>
-
+        <div class="page__box">
+            <button class="burger-menu__button burger-menu__button_open" id="burger-menu-open">
+                <svg class="menu__icon" id="menu">
+                    <use xlink:href="../../assets/icons/icons.svg#menu"></use>
+                </svg>
+            </button>
+            <div class="header__logo logo__wrapper">
+                <div class="logo__square"></div>
+                <div class="logo__circle"></div>
+                <div class="logo__triangle"></div>
+            </div>
+        </div>
+        <div class="burger-menu" id="burger-menu">
+            <div class="burger-menu__header">
+                <div class="page__box">
+                    <button class="burger-menu__button burger-menu__button_close" id="burger-menu-close">
+                        <svg class="menu__icon menu__icon_close" id="c">
+                            <use xlink:href="../../assets/icons/icons.svg#crossBurger"></use>
+                        </svg>
+                    </button>
+                    <div class="header__logo logo__wrapper">
+                        <div class="logo__square"></div>
+                        <div class="logo__circle"></div>
+                        <div class="logo__triangle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="burger-menu__body">
+                <div class="body__header">
+                    <div class="header__title">Dark mode</div>
+                    <label class="toggler">
+                        <input type="checkbox" class="toggler__input">
+                        <div class="toggler__state">
+                            <div class="toggler__control">
+                                <div class="toggler__circle"></div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="body__content">
+                    <h4 class="content__title">Components</h4>
+                    <div class="content__text">Modal</div>
+                    <div class="content__text content__text_active">Tooltip</div>
+                    <div class="content__text">Avatar</div>
+                    <div class="content__text">Calendar</div>
+                    <div class="content__text">Histogram</div>
+                    <div class="content__text">Custom form elements</div>
+                    <div class="content__text content__text_back">Main page</div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
