@@ -6,6 +6,11 @@
     padding-right: 16px;
 }
 
+.logo__image {
+    width: 110px;
+    height: 32px;
+}
+
 .logo__square {
     border: 15px solid var(--title-shapes);
 }

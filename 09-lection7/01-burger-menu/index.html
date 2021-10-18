@@ -2,11 +2,72 @@
 <!-- Страница бургер-меню -->
 <html lang="ru">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./burger-menu.css">
+        <link rel="stylesheet" href="./burger-menu-opener.css">
+        <link rel="stylesheet" href="../../components/customForm/toggle.css">
+        <link rel="stylesheet" href="../../components/logo/logo.css">
         <script defer src="./burger-menu.js"></script>
+        <style>
+            .page__box {
+                position: relative;
+                margin-top: 16px;
+            }
+        </style>
     </head>
     <body>
-
+        <div class="page__box burger-menu-opener">
+            <button class="burger-menu-opener__button" id="burger-menu-open">
+                <svg class="burger-menu__icon" id="menu">
+                    <use xlink:href="../../assets/icons/icons.svg#menu"></use>
+                </svg>
+            </button>
+            <div class="burger-menu-opener__logo">
+                <svg class="logo__image">
+                    <use xlink:href="../../assets/icons/icons.svg#logo"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="burger-menu" id="burger-menu">
+            <div class="burger-menu__header">
+                <div class="page__box">
+                    <button class="burger-menu__button burger-menu__button_close" id="burger-menu-close">
+                        <svg class="burger-menu__icon menu__icon_close" id="c">
+                            <use xlink:href="../../assets/icons/icons.svg#crossBurger"></use>
+                        </svg>
+                    </button>
+                    <div class="burger-menu__logo">
+                        <svg class="logo__image">
+                            <use xlink:href="../../assets/icons/icons.svg#logo"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="burger-menu__body">
+                <div class="burger-menu__section">
+                    <div class="burger-menu__option-title">Dark mode</div>
+                    <label class="toggler">
+                        <input type="checkbox" class="toggler__input">
+                        <div class="toggler__state">
+                            <div class="toggler__control">
+                                <div class="toggler__circle"></div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div class="burger-menu__section">
+                    <h4 class="burger-menu__section-title">Components</h4>
+                    <a href="#" class="burger-menu__section-link">Modal</a>
+                    <a href="#" class="burger-menu__section-link burger-menu__section-link_active">Tooltip</a>
+                    <a href="#" class="burger-menu__section-link">Avatar</a>
+                    <a href="#" class="burger-menu__section-link">Calendar</a>
+                    <a href="#" class="burger-menu__section-link">Histogram</a>
+                    <a href="#" class="burger-menu__section-link">Custom form elements</a>
+                    <a href="#" class="burger-menu__section-link burger-menu__section-link_back">Main page</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
