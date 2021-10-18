@@ -31,7 +31,7 @@
     justify-content: center;
 }
 
-.body__section {
+.burger-menu__section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -40,11 +40,11 @@
     padding: 28px 16px 24px ;
 }
 
-.body__section + .body__section {
+.burger-menu__section + .burger-menu__section {
     display: block;
 }
 
-.header__title {
+.burger-menu__option-title {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
