@@ -23,12 +23,8 @@
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    color: var(--grey-4);
+    color: var(--secondary-light-font);
     margin-left: 12px;
-}
-
-html[data-theme-dark] .radio__label {
-    color: var(--white);
 }
 
 .radio__control {
@@ -66,11 +62,7 @@ html[data-theme-dark] .radio__label {
 }
 
 .radio__input:disabled ~ .radio__state .radio__label {
-    color: var(--grey-2);
-}
-
-html[data-theme-dark] .radio__input:disabled ~ .radio__state .radio__label {
-    color: var(--white-transparent);
+    color: var(--disabled-font);
 }
 
 .radio__input:focus ~ .radio__state .radio__label {

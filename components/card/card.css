@@ -1,5 +1,5 @@
 .card {
-    background-color: var(--white);
+    background-color: var(--main-bg);
     box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
     border-radius: 12px;
     width: 33.3333%;
@@ -7,11 +7,6 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-top: 32px;
-}
-
-html[data-theme-dark] .card {
-    background-color: var(--black);
-    box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
 }
 
 .card__body {
@@ -32,7 +27,7 @@ html[data-theme-dark] .card {
 }
 
 .card__title {
-    color: var(--black);
+    color: var(--main-font);
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -40,12 +35,8 @@ html[data-theme-dark] .card {
     text-align: center;
 }
 
-html[data-theme-dark] .card__title {
-    color: var(--white-transparent);
-}
-
 .card__text {
-    color: var(--black);
+    color: var(--main-font);
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -54,6 +45,3 @@ html[data-theme-dark] .card__title {
     padding-top: 5px;
 }
 
-html[data-theme-dark] .card__text {
-    color: var(--white-transparent);
-}

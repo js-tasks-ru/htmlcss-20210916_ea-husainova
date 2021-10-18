@@ -1,10 +1,6 @@
 .preview {
-    background-color: var(--alice-blue);
+    background-color: var(--preview-bg);
     padding: 68px 0;
-}
-
-html[data-theme-dark] .preview {
-    background-color: var(--grey-4);
 }
 
 .preview__box {

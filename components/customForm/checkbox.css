@@ -23,12 +23,8 @@
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    color: var(--grey-4);
+    color: var(--secondary-light-font);
     margin-left: 12px;
-}
-
-html[data-theme-dark] .checkbox__label {
-    color: var(--white);
 }
 
 .checkbox__control {
@@ -66,11 +62,7 @@ html[data-theme-dark] .checkbox__label {
 }
 
 .checkbox__input:disabled ~ .checkbox__state .checkbox__label {
-    color: var(--grey-2);
-}
-
-html[data-theme-dark] .checkbox__input:disabled ~ .checkbox__state .checkbox__label {
-    color: var(--white-transparent);
+    color: var(--disabled-font);
 }
 
 .checkbox__input:focus ~ .checkbox__state .checkbox__label {

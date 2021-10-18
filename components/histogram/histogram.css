@@ -24,12 +24,8 @@
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    color: var(--black);
+    color: var(--secondary-font);
     line-height: 24px;
-}
-
-html[data-theme-dark] .header__orders {
-    color: var(--grey-3);
 }
 
 .header__view-control {
@@ -46,12 +42,8 @@ html[data-theme-dark] .header__orders {
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    color: var(--black);
+    color: var(--main-font);
     line-height: 26px;
-}
-
-html[data-theme-dark] .header__counter {
-    color: var(--white);
 }
 
 .histogram__chart {

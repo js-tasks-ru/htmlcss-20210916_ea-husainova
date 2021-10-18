@@ -33,6 +33,38 @@
     --secondary: var(--purple);
 }
 
+html {
+    --main-bg: var(--white);
+    --preview-bg: var(--alice-blue);
+    --selection-bg: rgba(160, 177, 245, 0.2);
+    --main-font: var(--black);
+    --secondary-font: var(--black);
+    --secondary-light-font: var(--grey-4);
+    --month-font: var(--cello);
+    --week-font: var(--rock-blue);
+    --day-font: var(--san-juan);
+    --day-selected-font: var(--san-juan);
+    --disabled-font: var(--grey-2);
+    --title-shapes: var(--black);
+    --tab-font: var(--black);
+}
+
+html[data-theme-dark] {
+    --main-bg: var(--black);
+    --preview-bg: var(--grey-4);
+    --selection-bg: var(--cornflower-blue);
+    --main-font: var(--white-transparent);
+    --secondary-font: var(--grey-3);
+    --secondary-light-font: var(--white);
+    --month-font: var(--white-transparent);
+    --week-font: var(--grey-3);
+    --day-font: var(--white-transparent);
+    --day-selected-font: var(--white);
+    --disabled-font: var(--white-transparent);
+    --title-shapes: var(--grey-1);
+    --tab-font: var(--grey-2);
+}
+
 * {
     font-family: 'Roboto', sans-serif;
 }
