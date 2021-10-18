@@ -2,6 +2,7 @@
 
 :root {
     --white: #ffffff;
+    --white-transparent: #ffffff75;
     --black: #212429;
     --black-black: #000000;
     --pink: #F784AD;
@@ -11,6 +12,7 @@
     --royal-blue: #4263eb;
     --persian-blue: #2342c0;
     --free-speech-blue: #374FC7;
+    --cornflower-blue: #708AF0;
     --rock-blue: #90A0B7;
     --alice-blue: #F9FAFC;
     --red: #F03D3E;
@@ -29,6 +31,38 @@
 
     --primary: var(--blue);
     --secondary: var(--purple);
+}
+
+html {
+    --main-bg: var(--white);
+    --preview-bg: var(--alice-blue);
+    --selection-bg: rgba(160, 177, 245, 0.2);
+    --main-font: var(--black);
+    --secondary-font: var(--black);
+    --secondary-light-font: var(--grey-4);
+    --month-font: var(--cello);
+    --week-font: var(--rock-blue);
+    --day-font: var(--san-juan);
+    --day-selected-font: var(--san-juan);
+    --disabled-font: var(--grey-2);
+    --title-shapes: var(--black);
+    --tab-font: var(--black);
+}
+
+html[data-theme-dark] {
+    --main-bg: var(--black);
+    --preview-bg: var(--grey-4);
+    --selection-bg: var(--cornflower-blue);
+    --main-font: var(--white-transparent);
+    --secondary-font: var(--grey-3);
+    --secondary-light-font: var(--white);
+    --month-font: var(--white-transparent);
+    --week-font: var(--grey-3);
+    --day-font: var(--white-transparent);
+    --day-selected-font: var(--white);
+    --disabled-font: var(--white-transparent);
+    --title-shapes: var(--grey-1);
+    --tab-font: var(--grey-2);
 }
 
 * {

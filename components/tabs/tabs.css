@@ -12,7 +12,7 @@
 }
 
 .nav__label {
-    font-family: Inter, "sans-serif";
+    font-family: "Inter", "sans-serif";
     font-size: 16px;
     color: var(--grey-3);
     padding: 8px 0;
@@ -33,8 +33,8 @@
 .tabs__input_atoms:hover ~ .tabs__nav .nav__label_atoms,
 .tabs__input_molecules:hover ~ .tabs__nav .nav__label_molecules,
 .tabs__input_organisms:hover ~ .tabs__nav .nav__label_organisms {
-    border-bottom: 5px solid var(--black);
-    color: var(--black);
+    border-bottom: 5px solid var(--title-shapes);
+    color: var(--tab-font);
 }
 
 .tabs__content {

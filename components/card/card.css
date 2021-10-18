@@ -1,5 +1,5 @@
 .card {
-    background-color: var(--white);
+    background-color: var(--main-bg);
     box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
     border-radius: 12px;
     width: 33.3333%;
@@ -27,7 +27,7 @@
 }
 
 .card__title {
-    color: var(--black);
+    color: var(--main-font);
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -36,7 +36,7 @@
 }
 
 .card__text {
-    color: var(--black);
+    color: var(--main-font);
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -44,3 +44,4 @@
     text-align: center;
     padding-top: 5px;
 }
+
