@@ -9,7 +9,7 @@
 }
 
 .modal__content {
-    background-color: var(--white);
+    background-color: var(--white-bg);
     border-radius: 8px;
     width: 428px;
     height: 294px;

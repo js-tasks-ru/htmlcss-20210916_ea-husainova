@@ -19,11 +19,11 @@
 }
 
 .radio__label {
-    font-family: Inter;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    color: var(--grey-4);
+    color: var(--secondary-light-font);
     margin-left: 12px;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .radio__input:disabled ~ .radio__state .radio__label {
-    color: var(--grey-2);
+    color: var(--disabled-font);
 }
 
 .radio__input:focus ~ .radio__state .radio__label {
