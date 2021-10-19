@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="../components/logo/logo.css">
         <link rel="stylesheet" href="../components/button/button.css">
         <link rel="stylesheet" href="../components/modal/modal.css">
+        <link rel="stylesheet" href="../components/customForm/input.css">
+        <link rel="stylesheet" href="../components/button/button.css">
     </head>
     <body>
         <div class="page">
@@ -36,11 +38,27 @@
                     <button class="button button_primary" id="modal-open">Open modal</button>
                     <div class="modal" id="modal">
                         <div class="modal__content">
-                            <h3 class="modal__title">Modal title</h3>
-                            <p class="modal__description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.Velit officia consequat duis enim velit mollit.
-                                Exercitation veniam consequat sunt nostrud amet.</p>
+                            <label class=" content__form-group form-group">
+                                <div class="form-group__title">Name</div>
+                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                <svg class="form-group__icon form-group__icon_success">
+                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                </svg>
+                                <svg class="form-group__icon form-group__icon_error">
+                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                </svg> 
+                            </label>
+                            <label class="form-group">
+                                <div class="form-group__title">Email</div>
+                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                <svg class="form-group__icon form-group__icon_success">
+                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                </svg>
+                                <svg class="form-group__icon form-group__icon_error">
+                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                </svg> 
+                            </label>
+                            <button class="button__form-group button button_primary">Submit</button>
                             <svg class="modal__button" id="modal-close">
                                 <use xlink:href="../assets/icons/icons.svg#cross"></use>
                             </svg>
