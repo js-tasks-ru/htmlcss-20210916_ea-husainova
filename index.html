@@ -20,6 +20,8 @@
         <link rel="stylesheet" href="./components/histogram/histogram.css">
         <link rel="stylesheet" href="./components/avatar/avatar.css">
         <link rel="stylesheet" href="./components/modal/modal.css">
+        <link rel="stylesheet" href="./components/button/button.css">
+        <link rel="stylesheet" href="./components/customForm/input.css">
     </head>
     <body>
         <div class="page">
@@ -191,16 +193,29 @@
                         </div>
                         <div class="card preview__card">
                             <div class="card__body">
-                                <div class="modal" id="modal">
-                                    <div class="modal__content">
-                                        <h3 class="modal__title">Modal title</h3>
-                                        <p class="modal__description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.Velit officia consequat duis enim velit mollit.
-                                            Exercitation veniam consequat sunt nostrud amet.</p>
-                                        <svg class="modal__button" id="modal-close">
-                                            <use xlink:href="./assets/icons/icons.svg#cross"></use>
-                                        </svg>
+                                <div class="modal modal_preview" id="modal">
+                                    <div class="modal__content modal__content_preview">
+                                        <label class="form-group form-group__content">
+                                            <div class="form-group__title">Name</div>
+                                            <input type="text" class="form-group__input" placeholder="Placeholder">
+                                            <svg class="form-group__icon form-group__icon_success">
+                                                <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                            </svg>
+                                            <svg class="form-group__icon form-group__icon_error">
+                                                <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                            </svg> 
+                                        </label>
+                                        <label class="form-group form-group__content">
+                                            <div class="form-group__title">Email</div>
+                                            <input type="text" class="form-group__input" placeholder="Placeholder">
+                                            <svg class="form-group__icon form-group__icon_success">
+                                                <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                            </svg>
+                                            <svg class="form-group__icon form-group__icon_error">
+                                                <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                            </svg> 
+                                        </label>
+                                        <button class="button button_primary button__form-group">Submit</button>
                                     </div>
                                 </div>
                             </div>

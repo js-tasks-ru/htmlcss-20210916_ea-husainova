@@ -8,6 +8,13 @@
     left: 0;
 }
 
+.modal_preview {
+    display: block;
+    position: static;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .modal__content {
     background-color: var(--main-bg);
     border-radius: 8px;
@@ -21,6 +28,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+.modal__content_preview {
+    width: auto;
+    height: auto;
+    margin: 15px;
+    padding: 15px 20px;
+}
+
+.modal_preview .modal__content {
+    top: 0;
+    left: 0;
+    transform: none;
+    position: relative;
 }
 
 .modal__title {

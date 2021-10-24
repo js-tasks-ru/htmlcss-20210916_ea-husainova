@@ -57,3 +57,7 @@
     display: block;
     color: var(--red);
 }
+
+.form-group__content {
+    margin-bottom: 15px;
+}

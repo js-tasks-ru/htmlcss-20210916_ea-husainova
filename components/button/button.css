@@ -57,3 +57,7 @@
     color: var(--grey-4);
     border: 1px solid var(--grey-3);
 }
+
+.button__form-group {
+    width: 100px;
+}
