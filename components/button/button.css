@@ -1,5 +1,6 @@
 .button {
-    width: 189px;
+    min-width: 189px;
+    width: 100%;
     height: 48px;
     border: none;
     border-radius: 8px;
@@ -56,4 +57,44 @@
 .button_alternate:disabled {
     color: var(--grey-4);
     border: 1px solid var(--grey-3);
+}
+
+.button__container {
+    width: 100%;
+}
+
+.button__container_section {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: row;
+    grid-gap: 32px;
+}
+
+.button__container_title {
+    text-transform: uppercase;
+    color: var(--grey-3);
+    font-family: "Inter",sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 32px;
+    margin-top: 64px;
+}
+
+.section__button {
+    border: none;
+    color: var(--main-font);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.section__button:disabled {
+    color: var(--grey-3);
+    background-color: transparent;
+    pointer-events: none;
 }
