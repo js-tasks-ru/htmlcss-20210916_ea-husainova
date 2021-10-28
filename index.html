@@ -16,12 +16,14 @@
         <link rel="stylesheet" href="./components/customForm/radio.css">
         <link rel="stylesheet" href="./components/customForm/checkbox.css">
         <link rel="stylesheet" href="./components/customForm/toggle.css">
+        <link rel="stylesheet" href="components/customForm/inpit.css">
         <link rel="stylesheet" href="./components/calendar/calendar.css">
         <link rel="stylesheet" href="./components/histogram/histogram.css">
         <link rel="stylesheet" href="./components/avatar/avatar.css">
         <link rel="stylesheet" href="./components/modal/modal.css">
         <link rel="stylesheet" href="./components/button/button.css">
         <link rel="stylesheet" href="./components/customForm/custom.css">
+        <link rel="stylesheet" href="./components/sceleton/sceleton.css">
     </head>
     <body>
         <div class="page">
@@ -538,6 +540,62 @@
                                    <div class="card__title">Calendar</div>
                                    <div class="card__text">Container</div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="sceleton__container">
+                            <div class="sceleton__container_title">Sceleton</div>
+                            <div class="sceleton__container_section">
+                                <div class="skeleton">
+                                    <div class="skeleton__title">
+                                        <div class="skeleton__avatar"></div>
+                                        <div class="skeleton__info">
+                                            <div class="skeleton__line skeleton__line_sm"></div>
+                                            <div class="skeleton__line skeleton__line_md"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skeleton__body">
+                                        <div class="skeleton__line skeleton__line_lg"></div>
+                                        <div class="skeleton__line skeleton__line_lg"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom__container">
+                            <div class="custom__container_title">Custom form elements</div>
+                            <div class="custom__container_row">
+                                <label class="form-group section__form-group">
+                                    <div class="form-group__title">Label</div>
+                                    <input type="text" class="form-group__input">
+                                    <div class="form-group__status">Some status</div>
+                                    <svg class="form-group__icon form-group__icon_success">
+                                        <use xlink:href="./assets/icons/icons.svg#success"></svg>
+                                    </svg>
+                                    <svg class="form-group__icon form-group__icon_error">
+                                        <use xlink:href="./assets/icons/icons.svg#error"></svg>
+                                    </svg> 
+                                </label>
+                                <label class="form-group section__form-group section__form-group_error">
+                                    <div class="form-group__title">Label</div>
+                                    <input type="text" class="form-group__input form-group__input_error">
+                                    <div class="form-group__status_error">Some status</div>
+                                    <svg class="form-group__icon form-group__icon_success">
+                                        <use xlink:href="./assets/icons/icons.svg#success"></svg>
+                                    </svg>
+                                    <svg class="form-group__icon form-group__icon_error">
+                                        <use xlink:href="./assets/icons/icons.svg#error"></svg>
+                                    </svg> 
+                                </label>
+                                <label class="form-group section__form-group">
+                                    <div class="form-group__title">Label</div>
+                                    <input type="text" class="form-group__input form-group__input_success">
+                                    <div class="form-group__status_success">Some status</div>
+                                    <svg class="form-group__icon form-group__icon_success">
+                                        <use xlink:href="./assets/icons/icons.svg#success"></svg>
+                                    </svg>
+                                    <svg class="form-group__icon form-group__icon_error">
+                                        <use xlink:href="./assets/icons/icons.svg#error"></svg>
+                                    </svg> 
+                                </label>
                             </div>
                         </div>
                     </div>
