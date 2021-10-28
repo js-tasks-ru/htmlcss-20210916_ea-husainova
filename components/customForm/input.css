@@ -40,9 +40,9 @@
 
 .form-group__icon {
     position: absolute;
-    top: 60%;
-    left: 95%;
-    transform: translate(-95%, -55%);
+    top: 50%;
+    right: 18px;
+    transform: translate(0, -50%);
     width: 24px;
     height: 24px;
     display: none;
