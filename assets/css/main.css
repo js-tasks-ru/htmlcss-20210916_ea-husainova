@@ -47,6 +47,7 @@ html {
     --disabled-font: var(--grey-2);
     --title-shapes: var(--black);
     --tab-font: var(--black);
+    --input-font: var(--grey-4);
 }
 
 html[data-theme-dark] {
@@ -63,6 +64,7 @@ html[data-theme-dark] {
     --disabled-font: var(--white-transparent);
     --title-shapes: var(--grey-1);
     --tab-font: var(--grey-2);
+    --input-font: var(--white-transparent);
 }
 
 * {
