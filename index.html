@@ -22,7 +22,9 @@
         <link rel="stylesheet" href="./components/avatar/avatar.css">
         <link rel="stylesheet" href="./components/modal/modal.css">
         <link rel="stylesheet" href="./components/button/button.css">
+        <link rel="stylesheet" href="./components/customForm/input.css">
         <link rel="stylesheet" href="./components/customForm/custom.css">
+        <link rel="stylesheet" href="./components/container/container.css">
         <link rel="stylesheet" href="./components/sceleton/sceleton.css">
     </head>
     <body>
@@ -196,16 +198,29 @@
                             </div>
                             <div class="card preview__card">
                                 <div class="card__body">
-                                    <div class="modal" id="modal">
-                                        <div class="modal__content">
-                                            <h3 class="modal__title">Modal title</h3>
-                                            <p class="modal__description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                                                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.Velit officia consequat duis enim velit mollit.
-                                                Exercitation veniam consequat sunt nostrud amet.</p>
-                                            <svg class="modal__button" id="modal-close">
-                                                <use xlink:href="./assets/icons/icons.svg#cross"></use>
-                                            </svg>
+                                    <div class="modal modal_preview" id="modal">
+                                        <div class="modal__content modal__content_preview">
+                                            <label class="form-group form-group__content">
+                                                <div class="form-group__title">Name</div>
+                                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                                <svg class="form-group__icon form-group__icon_success">
+                                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                                </svg>
+                                                <svg class="form-group__icon form-group__icon_error">
+                                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                                </svg> 
+                                            </label>
+                                            <label class="form-group form-group__content">
+                                                <div class="form-group__title">Email</div>
+                                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                                <svg class="form-group__icon form-group__icon_success">
+                                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                                </svg>
+                                                <svg class="form-group__icon form-group__icon_error">
+                                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                                </svg> 
+                                            </label>
+                                            <button class="button button_primary button__form-group">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -305,21 +320,21 @@
                             </div>
                         </div>
                         <div class="button__container">
-                            <div class="button__container_title">Buttons</div>
-                            <div class="button__container_section">
-                                <button class="section__button">Button</button>
+                            <div class="container__title">Buttons</div>
+                            <div class="container__button-section">
+                                <button class="button button-section__button">Button</button>
                                 <button class="button button_primary">Primary</button>
                                 <button class="button button_secondary">Secondary</button>
                                 <button class="button button_alternate">Alternate</button>
-                                <button class="section__button" disabled="disabled">Button disabled</button>
+                                <button class="button button-section__button" disabled="disabled">Button disabled</button>
                                 <button class="button button_primary" disabled="disabled">Primary disabled</button>
                                 <button class="button button_secondary" disabled="disabled">Secondary disabled</button>
                                 <button class="button button_alternate" disabled="disabled">Alternate disabled</button>
                             </div>
                         </div>
                         <div class="custom__container">
-                            <div class="custom__container_title">Custom form elements</div>
-                            <div class="custom__container_section">
+                            <div class="container__title">Custom form elements</div>
+                            <div class="container__custom-section">
                                 <label class="radio">
                                     <input type="radio" class="radio__input" name="radio-name">
                                     <div class="radio__state">

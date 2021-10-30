@@ -59,29 +59,15 @@
     border: 1px solid var(--grey-3);
 }
 
+.button__form-group {
+    width: 100px;
+}
+
 .button__container {
     width: 100%;
 }
 
-.button__container_section {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: row;
-    grid-gap: 32px;
-}
-
-.button__container_title {
-    text-transform: uppercase;
-    color: var(--grey-3);
-    font-family: "Inter",sans-serif;
-    font-weight: 400;
-    font-size: 28px;
-    margin-bottom: 32px;
-    margin-top: 64px;
-}
-
-.section__button {
+.button-section__button {
     border: none;
     color: var(--main-font);
     font-family: "Roboto", sans-serif;
@@ -92,8 +78,7 @@
     cursor: pointer;
 }
 
-
-.section__button:disabled {
+.button-section__button:disabled {
     color: var(--grey-3);
     background-color: transparent;
     pointer-events: none;
