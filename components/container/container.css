@@ -1,0 +1,25 @@
+.container__title {
+    text-transform: uppercase;
+    color: var(--grey-3);
+    font-family: "Inter",sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 32px;
+    margin-top: 64px;
+}
+
+.container__button-section {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: row;
+    grid-gap: 32px;
+}
+
+.container__custom-section {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    grid-gap: 32px;
+}
