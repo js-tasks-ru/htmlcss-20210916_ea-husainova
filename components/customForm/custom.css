@@ -2,3 +2,6 @@
     width: 100%;
 }
 
+.custom-row__form-group {
+    width: 33%;
+}

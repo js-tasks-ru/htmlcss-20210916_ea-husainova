@@ -61,3 +61,32 @@
 .form-group__content {
     margin-bottom: 15px;
 }
+
+.form-group__input_error {
+    border: 1px solid var(--red);
+}
+
+.form-group__input_success {
+    border: 1px solid var(--free-speech-blue);
+}
+
+.form-group__status {
+    font-family: "inter", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--grey-3);
+}
+
+.form-group__status_error {
+    font-family: "inter", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--red);
+}
+
+.form-group__status_success {
+    font-family: "inter", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--free-speech-blue);
+}
