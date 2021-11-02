@@ -43,12 +43,3 @@
     text-align: center;
     padding-top: 5px;
 }
-
-.card__container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, calc(33.3333% - 15px));
-    grid-template-rows: repeat(auto-fill, minmax(350px, auto));
-    grid-auto-flow: row;
-    grid-gap: 30px;
-}

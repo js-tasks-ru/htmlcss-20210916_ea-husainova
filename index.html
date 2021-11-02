@@ -22,8 +22,7 @@
         <link rel="stylesheet" href="./components/modal/modal.css">
         <link rel="stylesheet" href="./components/button/button.css">
         <link rel="stylesheet" href="./components/customForm/input.css">
-        <link rel="stylesheet" href="./components/customForm/custom.css">
-        <link rel="stylesheet" href="./components/container/container.css">
+        <link rel="stylesheet" href="./components/section/section.css">
         <link rel="stylesheet" href="./components/sceleton/sceleton.css">
     </head>
     <body>
@@ -52,7 +51,7 @@
 
                 <div class="tabs__content tabs__content_all preview">
                     <div class="page__box preview__box">
-                        <div class="card__container">
+                        <div class="preview__card-wrapper">
                             <div class="card preview__card">
                                 <div class="card__body card__body_tooltip">
                                     <div class="tooltip">
@@ -219,7 +218,7 @@
                                                     <use xlink:href="../../assets/icons/icons.svg#error"></svg>
                                                 </svg> 
                                             </label>
-                                            <button class="button button_primary button__form-group">Submit</button>
+                                            <button class="button button_primary button_small">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -291,7 +290,7 @@
                 </div>
                 <div class="tabs__content tabs__content_atoms preview">
                     <div class="page__box preview__box">
-                        <div class="card__container">
+                        <div class="preview__card-wrapper">
                             <div class="card preview__card">
                                 <div class="card__body card__body_tooltip">
                                     <div class="tooltip">
@@ -318,22 +317,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="button__container">
-                            <div class="container__title">Buttons</div>
-                            <div class="container__button-section">
-                                <button class="button button-section__button">Button</button>
+                        <div class="section">
+                            <div class="section__title">Buttons</div>
+                            <div class="section__content section__content_four-column">
+                                <button class="button button_borderless">Button</button>
                                 <button class="button button_primary">Primary</button>
                                 <button class="button button_secondary">Secondary</button>
                                 <button class="button button_alternate">Alternate</button>
-                                <button class="button button-section__button" disabled="disabled">Button disabled</button>
+                                <button class="button button_borderless" disabled="disabled">Button disabled</button>
                                 <button class="button button_primary" disabled="disabled">Primary disabled</button>
                                 <button class="button button_secondary" disabled="disabled">Secondary disabled</button>
                                 <button class="button button_alternate" disabled="disabled">Alternate disabled</button>
                             </div>
                         </div>
-                        <div class="custom__container">
-                            <div class="container__title">Custom form elements</div>
-                            <div class="container__custom-section">
+                        <div class="section">
+                            <div class="section__title">Custom form elements</div>
+                            <div class="section__content section__content_three-column">
                                 <label class="radio">
                                     <input type="radio" class="radio__input" name="radio-name">
                                     <div class="radio__state">
@@ -427,7 +426,7 @@
                 </div>
                 <div class="tabs__content tabs__content_molecules preview">
                     <div class="page__box preview__box">
-                        <div class="card__container">
+                        <div class="preview__card-wrapper">
                             <div class="card preview__card">
                                 <div class="card__body">
                                     <div class="checkbox__grid">
@@ -556,9 +555,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sceleton__container">
-                            <div class="container__title">Sceleton</div>
-                            <div class="container__sceleton-section">
+                        <div class="section">
+                            <div class="section__title">Sceleton</div>
+                            <div class="section__content section__content_full-height">
                                 <div class="skeleton">
                                     <div class="skeleton__title">
                                         <div class="skeleton__avatar"></div>
@@ -574,10 +573,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="custom__container">
-                            <div class="container__title">Custom form elements</div>
-                            <div class="container__custom-row">
-                                <label class="form-group custom-row__form-group">
+                        <div class="section">
+                            <div class="section__title">Custom form elements</div>
+                            <div class="section__content">
+                                <label class="form-group form-group">
                                     <div class="form-group__title">Label</div>
                                     <input type="text" class="form-group__input">
                                     <div class="form-group__status">Some status</div>
@@ -588,10 +587,10 @@
                                         <use xlink:href="./assets/icons/icons.svg#error"></svg>
                                     </svg> 
                                 </label>
-                                <label class="form-group custom-row__form-group custom-row__form-group_error">
+                                <label class="form-group form-group_error">
                                     <div class="form-group__title">Label</div>
-                                    <input type="text" class="form-group__input form-group__input_error">
-                                    <div class="form-group__status_error">Some status</div>
+                                    <input type="text" class="form-group__input form-group__input">
+                                    <div class="form-group__status">Some status</div>
                                     <svg class="form-group__icon form-group__icon_success">
                                         <use xlink:href="./assets/icons/icons.svg#success"></svg>
                                     </svg>
@@ -599,10 +598,10 @@
                                         <use xlink:href="./assets/icons/icons.svg#error"></svg>
                                     </svg> 
                                 </label>
-                                <label class="form-group custom-row__form-group">
+                                <label class="form-group form-group_success">
                                     <div class="form-group__title">Label</div>
-                                    <input type="text" class="form-group__input form-group__input_success">
-                                    <div class="form-group__status_success">Some status</div>
+                                    <input type="text" class="form-group__input form-group__input">
+                                    <div class="form-group__status">Some status</div>
                                     <svg class="form-group__icon form-group__icon_success">
                                         <use xlink:href="./assets/icons/icons.svg#success"></svg>
                                     </svg>
@@ -616,7 +615,7 @@
                 </div>
                 <div class="tabs__content tabs__content_organisms preview">
                     <div class="page__box preview__box">
-                        <div class="card__container">
+                        <div class="preview__card-wrapper">
                             <div class="card preview__card">
                                 <div class="card__body">
                                     <div class="modal" id="modal">

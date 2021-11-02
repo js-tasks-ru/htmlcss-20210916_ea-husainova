@@ -1,4 +1,8 @@
-.container__title {
+.section {
+    width: 100%;
+}
+
+.section__title {
     text-transform: uppercase;
     color: var(--grey-3);
     font-family: "Inter",sans-serif;
@@ -8,7 +12,11 @@
     margin-top: 64px;
 }
 
-.container__button-section {
+.section__content {
+    width: 100%;
+}
+
+.section__content_four-column {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: repeat(2, auto);
@@ -16,7 +24,7 @@
     grid-gap: 32px;
 }
 
-.container__custom-section {
+.section__content_three-column {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
@@ -24,11 +32,6 @@
     grid-gap: 32px;
 }
 
-.container__sceleton-section {
-    width: 100%;
+.section__content_full-height {
     height: 100%;
-}
-
-.container__custom-row {
-    width: 100%;
 }
