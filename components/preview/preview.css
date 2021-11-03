@@ -15,6 +15,15 @@
     flex-basis: 350px;
 }
 
+.preview__card-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, calc(33.3333% - 15px));
+    grid-template-rows: repeat(auto-fill, minmax(350px, auto));
+    grid-auto-flow: row;
+    grid-gap: 30px;
+}
+
 @media (max-width: 768px) {
     .preview__box {
         gap: 15px;
