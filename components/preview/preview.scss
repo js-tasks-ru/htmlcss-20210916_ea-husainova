@@ -1,0 +1,35 @@
+.preview {
+    background-color: var(--preview-bg);
+    padding: 68px 0;
+
+    &__box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    &__card {
+        flex-basis: 350px;
+    }
+    
+    &__card-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, calc(33.3333% - 15px));
+        grid-template-rows: repeat(auto-fill, minmax(350px, auto));
+        grid-auto-flow: row;
+        grid-gap: 30px;
+    }
+    
+    @media (max-width: 768px) {
+        &__box {
+            gap: 15px;
+        }
+    
+        &__card {
+            flex-basis: 240px;
+        }
+    }
+}

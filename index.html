@@ -2,37 +2,38 @@
 <!-- Главная страница -->
 <html lang="ru">
     <head>
+        <style>
+            html {
+                background: var(--main-bg);
+            }
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" href="./assets/css/normalize.css">
-        <link rel="stylesheet" href="./assets/css/main.css">
-        <link rel="stylesheet" href="./components/page/page.css">
-        <link rel="stylesheet" href="./components/header/header.css">
-        <link rel="stylesheet" href="./components/preview/preview.css">
-        <link rel="stylesheet" href="./components/card/card.css">
-        <link rel="stylesheet" href="./components/footer/footer.css">
-        <link rel="stylesheet" href="./components/logo/logo.css">
-        <link rel="stylesheet" href="./components/tabs/tabs.css">
-        <link rel="stylesheet" href="./components/tooltip/tooltip.css">
-        <link rel="stylesheet" href="./components/customForm/radio.css">
-        <link rel="stylesheet" href="./components/customForm/checkbox.css">
-        <link rel="stylesheet" href="./components/customForm/toggle.css">
-        <link rel="stylesheet" href="./components/calendar/calendar.css">
-        <link rel="stylesheet" href="./components/histogram/histogram.css">
-        <link rel="stylesheet" href="./components/avatar/avatar.css">
-        <link rel="stylesheet" href="./components/modal/modal.css">
-        <link rel="stylesheet" href="./components/button/button.css">
-        <link rel="stylesheet" href="./components/customForm/input.css">
-        <link rel="stylesheet" href="./components/section/section.css">
-        <link rel="stylesheet" href="./components/sceleton/sceleton.css">
+        <link rel="stylesheet" href="./build/index.css">
     </head>
     <body>
         <div class="page">
             <header class="header">
                 <div class="page__box">
                     <div class="header__logo logo__wrapper">
-                        <div class="logo__square"></div>
-                        <div class="logo__circle"></div>
-                        <div class="logo__triangle"></div>
+                        <svg class="logo__image">
+                            <use xlink:href="../../assets/icons/icons.svg#logo"></use>
+                        </svg>
+                        <div class="theme-changer">
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../../assets/icons/icons.svg#sun"></use>
+                            </svg>
+                            <label class="toggler theme-changer__toggler">
+                                <input type="checkbox" class="toggler__input" id="theme-changer">
+                                <div class="toggler__state">
+                                    <div class="toggler__control">
+                                        <div class="toggler__circle"></div>
+                                    </div>
+                                </div>
+                            </label>
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../../assets/icons/icons.svg#moon"></use>
+                            </svg>
+                        </div>
                     </div>
                     <h1 class="header__title">Reusable component library</h1>
                 </div>
@@ -196,7 +197,7 @@
                             </div>
                             <div class="card preview__card">
                                 <div class="card__body">
-                                    <div class="modal modal_preview" id="modal">
+                                    <div class="modal modal_preview">
                                         <div class="modal__content modal__content_preview">
                                             <label class="form-group form-group__content">
                                                 <div class="form-group__title">Name</div>
@@ -618,16 +619,29 @@
                         <div class="preview__card-wrapper">
                             <div class="card preview__card">
                                 <div class="card__body">
-                                    <div class="modal" id="modal">
-                                        <div class="modal__content">
-                                            <h3 class="modal__title">Modal title</h3>
-                                            <p class="modal__description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                                                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.Velit officia consequat duis enim velit mollit.
-                                                Exercitation veniam consequat sunt nostrud amet.</p>
-                                            <svg class="modal__button" id="modal-close">
-                                                <use xlink:href="./assets/icons/icons.svg#cross"></use>
-                                            </svg>
+                                    <div class="modal modal_preview">
+                                        <div class="modal__content modal__content_preview">
+                                            <label class="form-group form-group__content">
+                                                <div class="form-group__title">Name</div>
+                                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                                <svg class="form-group__icon form-group__icon_success">
+                                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                                </svg>
+                                                <svg class="form-group__icon form-group__icon_error">
+                                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                                </svg> 
+                                            </label>
+                                            <label class="form-group form-group__content">
+                                                <div class="form-group__title">Email</div>
+                                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                                <svg class="form-group__icon form-group__icon_success">
+                                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                                </svg>
+                                                <svg class="form-group__icon form-group__icon_error">
+                                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                                </svg> 
+                                            </label>
+                                            <button class="button button_primary button_small">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -684,6 +698,85 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="section">
+                            <div class="section__title">Modal</div>
+                            <div class="section__content_full-height">
+                                <div class="content__component">
+                                    <button class="button button_primary" id="modal-open">Open modal</button>
+                                    <div class="modal" id="modal">
+                                        <div class="modal__content">
+                                            <label class=" content__form-group form-group">
+                                                <div class="form-group__title">Name</div>
+                                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                                <svg class="form-group__icon form-group__icon_success">
+                                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                                </svg>
+                                                <svg class="form-group__icon form-group__icon_error">
+                                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                                </svg> 
+                                            </label>
+                                            <label class="form-group">
+                                                <div class="form-group__title">Email</div>
+                                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                                <svg class="form-group__icon form-group__icon_success">
+                                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                                </svg>
+                                                <svg class="form-group__icon form-group__icon_error">
+                                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                                </svg> 
+                                            </label>
+                                            <button class="button__form-group button button_primary">Submit</button>
+                                            <svg class="modal__button" id="modal-close">
+                                                <use xlink:href="../assets/icons/icons.svg#cross"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="section__title">Accordion</div>
+                            <div class="section__content">
+                                <div class="accordion">
+                                    <details class="item accordion__item" open>
+                                        <summary class="item__title accordion__summary">
+                                            Accordion item 1
+                                            <svg class="summary__arrow">
+                                                <use xlink:href="../../assets/icons/icons.svg#arrow"></use>
+                                            </svg>             
+                                        </summary>
+                                        <p class="item__body">
+                                            Amet minim mollit non ullamco est sit aliqua dolor do amet sint.
+                                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                    <details class="item accordion__item">
+                                        <summary class="item__title accordion__summary">
+                                            Accordion item 2
+                                            <svg class="summary__arrow">
+                                                <use xlink:href="../../assets/icons/icons.svg#arrow"></use>
+                                            </svg>  
+                                        </summary>
+                                        <p class="item__body">
+                                            Amet minim mollit non ullamco est sit aliqua dolor do amet sint.
+                                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                    <details class="item accordion__item">
+                                        <summary class="item__title accordion__summary">
+                                            Accordion item 3
+                                            <svg class="summary__arrow">
+                                                <use xlink:href="../../assets/icons/icons.svg#arrow"></use>
+                                            </svg>  
+                                        </summary>
+                                        <p class="item__body">
+                                            Amet minim mollit non ullamco est sit aliqua dolor do amet sint.
+                                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
@@ -695,5 +788,7 @@
                 </div>
             </footer>  
         </div>
+        <script defer src="./assets/scripts/theme-changer.js"></script>
+        <script src="./assets/scripts/modal.js"></script> 
     </body>
 </html>

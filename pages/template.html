@@ -2,39 +2,60 @@
 <html lang="ru">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../assets/css/normalize.css">
-        <link rel="stylesheet" href="../assets/css/main.css">
-        <link rel="stylesheet" href="../pages/template.css">
-        <link rel="stylesheet" href="../components/nav/nav.css">
-        <link rel="stylesheet" href="../components/logo/logo.css">
+        <link rel="stylesheet" href="../build/index.css">
+        <link rel="stylesheet" href="../build/template.css">
     </head>
     <body>
         <div class="page">
-            <div class="page__spacing"></div>
-            <div class="page__header">
-                <div class="header__logo logo__wrapper">
-                    <div class="logo__square"></div>
-                    <div class="logo__circle"></div>
-                    <div class="logo__triangle"></div>
+            <header class="header header_template">
+                <div class="page__box">
+                    <div class="header__logo logo__wrapper">
+                        <svg class="logo__image">
+                            <use xlink:href="../../assets/icons/icons.svg#logo"></use>
+                        </svg>
+                        <div class="theme-changer">
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../../assets/icons/icons.svg#sun"></use>
+                            </svg>
+                            <label class="toggler theme-changer__toggler">
+                                <input type="checkbox" class="toggler__input" id="theme-changer">
+                                <div class="toggler__state">
+                                    <div class="toggler__control">
+                                        <div class="toggler__circle"></div>
+                                    </div>
+                                </div>
+                            </label>
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../../assets/icons/icons.svg#moon"></use>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="page__spacing"></div>
-            <div class="page__nav">
-                <div class="nav__item nav__item_title">Components</div>
-                <div class="nav__item">Modal</div>
-                <div class="nav__item">Tooltip</div>
-                <div class="nav__item">Avatar</div>
-                <div class="nav__item">Calendar</div>
-                <div class="nav__item nav__item_active">Histogram</div>
-                <div class="nav__item">Custom form elements</div>
-            </div>
-            <div class="page__content">
-                <div class="content__title">Histogram</div>
-                <div class="content__component"></div>
-            </div>
-            <div class="page__spacing"></div>
-            <div class="page__footer">Reusable component library</div>
-            </div>
+            </header>
+            <main class="page__main">
+                <div class="page__box page__box_template">
+                    <div class="main__nav">
+                        <div class="nav__item nav__item_title">Components</div>
+                        <div class="nav__item">Modal</div>
+                        <div class="nav__item">Tooltip</div>
+                        <div class="nav__item">Avatar</div>
+                        <div class="nav__item">Calendar</div>
+                        <div class="nav__item nav__item_active">Histogram</div>
+                        <div class="nav__item">Custom form elements</div>
+                    </div>
+                    <div class="main__content">
+                        <div class="content__title">Histogram</div>
+                        <div class="content__component"></div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="page__box">
+                    <p class="footer__description footer__description_template">Reusable component library</p>
+                </div>
+            </footer>
         </div>
+        <script defer src="../assets/scripts/theme-changer.js"></script>
+        <script src="../assets/scripts/modal.js"></script> 
     </body>
 </html>

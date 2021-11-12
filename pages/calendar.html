@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
+        <style>
+            html {
+                background: var(--main-bg);
+            }
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../assets/css/normalize.css">
-        <link rel="stylesheet" href="../assets/css/main.css">
-        <link rel="stylesheet" href="../pages/template.css">
-        <link rel="stylesheet" href="../components/nav/nav.css">
-        <link rel="stylesheet" href="../components/logo/logo.css">
-        <link rel="stylesheet" href="../components/calendar/calendar.css">
+        <link rel="stylesheet" href="../build/index.css">
+        <link rel="stylesheet" href="../build/template.css">
     </head>
     <body>
         <div class="page">
             <div class="page__spacing"></div>
             <div class="page__header">
                 <div class="header__logo logo__wrapper">
-                    <div class="logo__square"></div>
-                    <div class="logo__circle"></div>
-                    <div class="logo__triangle"></div>
+                    <svg class="logo__image">
+                        <use xlink:href="../../assets/icons/icons.svg#logo"></use>
+                    </svg>
+                    <div class="theme-changer">
+                        <svg class="theme-changer__icon">
+                            <use xlink:href="../../assets/icons/icons.svg#sun"></use>
+                        </svg>
+                        <label class="toggler theme-changer__toggler">
+                            <input type="checkbox" class="toggler__input" id="theme-changer">
+                            <div class="toggler__state">
+                                <div class="toggler__control">
+                                    <div class="toggler__circle"></div>
+                                </div>
+                            </div>
+                        </label>
+                        <svg class="theme-changer__icon">
+                            <use xlink:href="../../assets/icons/icons.svg#moon"></use>
+                        </svg>
+                    </div>
                 </div>
             </div>
+            <div class="page__spacing"></div>
             <div class="page__spacing"></div>
             <div class="page__nav">
                 <div class="nav__item nav__item_title">Components</div>
@@ -87,5 +105,6 @@
             <div class="page__footer">Reusable component library</div>
             </div>
         </div>
+        <script defer src="../../assets/scripts/theme-changer.js"></script>
     </body>
 </html>

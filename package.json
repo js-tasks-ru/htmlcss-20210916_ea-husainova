@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Course Materials",
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js"
+    "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js",
+    "build": "postcss assets/css/index.scss -o build/index.css",
+    "build-template": "postcss assets/css/template.scss -o build/template.css"
   },
   "husky": {
     "hooks": {

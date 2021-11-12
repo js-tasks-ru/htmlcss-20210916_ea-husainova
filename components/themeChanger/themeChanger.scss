@@ -1,0 +1,14 @@
+.theme-changer {
+    margin-left: auto;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        color: var(--grey-3);
+    }
+    
+    &__toggler {
+        margin: 0 14px;
+    }
+}

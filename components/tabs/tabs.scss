@@ -1,0 +1,42 @@
+.tabs {
+    &__input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        outline: none;
+        position: absolute;
+        clip: rect(0 0 0 0);
+    }
+    
+    &__nav {
+        overflow: hidden;
+    }
+    
+    &__input_all:focus ~ &__nav .nav__label_all,
+    &__input_atoms:focus ~ &__nav .nav__label_atoms,
+    &__input_molecules:focus ~ &__nav .nav__label_molecules,
+    &__input_organisms:focus ~ &__nav .nav__label_organisms,
+    &__input_all:checked ~ &__nav .nav__label_all,
+    &__input_atoms:checked ~ &__nav .nav__label_atoms,
+    &__input_molecules:checked ~ &__nav .nav__label_molecules,
+    &__input_organisms:checked ~ &__nav .nav__label_organisms,
+    &__input_all:hover ~ &__nav .nav__label_all,
+    &__input_atoms:hover ~ &__nav .nav__label_atoms,
+    &__input_molecules:hover ~ &__nav .nav__label_molecules,
+    &__input_organisms:hover ~ &__nav .nav__label_organisms {
+        border-bottom: 5px solid var(--title-shapes);
+        color: var(--tab-font);
+    }
+    
+    &__content {
+        display: none;
+        border-top: 1px solid var(--grey-2);
+    }
+    
+    &__input_all:checked ~ &__content_all,
+    &__input_atoms:checked ~ &__content_atoms,
+    &__input_molecules:checked ~ &__content_molecules,
+    &__input_organisms:checked ~ &__content_organisms {
+        display: block;
+    }
+}
