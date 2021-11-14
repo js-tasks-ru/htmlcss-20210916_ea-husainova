@@ -27,5 +27,19 @@
         margin-right: 40px;
         cursor: pointer;
         display: inline-block;
+        border-bottom: 5px solid transparent;
+        position: relative;
+    }
+
+    &__label::after {
+        content: '';
+        position: absolute;
+        background-color: var(--title-shapes);
+        height: 5px;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        transition: transform 250ms ease-in-out;
+        transform: scaleX(0);
     }
 }
