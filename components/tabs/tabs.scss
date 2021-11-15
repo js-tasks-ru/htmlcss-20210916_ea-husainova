@@ -23,7 +23,13 @@
     &__input_all:hover ~ &__nav .nav__label_all,
     &__input_atoms:hover ~ &__nav .nav__label_atoms,
     &__input_molecules:hover ~ &__nav .nav__label_molecules,
-    &__input_organisms:hover ~ &__nav .nav__label_organisms {
+    &__input_organisms:hover ~ &__nav .nav__label_organisms,
+    &__input_html:focus ~ &__nav .nav__label_html,
+    &__input_html:checked ~ &__nav .nav__label_html,
+    &__input_html:hover ~ &__nav .nav__label_html,
+    &__input_css:focus ~ &__nav .nav__label_css,
+    &__input_css:checked ~ &__nav .nav__label_css,
+    &__input_css:hover ~ &__nav .nav__label_css {
         color: var(--tab-font);
     }
 
@@ -38,7 +44,13 @@
     &__input_all:hover ~ &__nav .nav__label_all::after,
     &__input_atoms:hover ~ &__nav .nav__label_atoms::after,
     &__input_molecules:hover ~ &__nav .nav__label_molecules::after,
-    &__input_organisms:hover ~ &__nav .nav__label_organisms::after {
+    &__input_organisms:hover ~ &__nav .nav__label_organisms::after,
+    &__input_html:focus ~ &__nav .nav__label_html::after,
+    &__input_html:checked ~ &__nav .nav__label_html::after,
+    &__input_html:hover ~ &__nav .nav__label_html::after,
+    &__input_css:focus ~ &__nav .nav__label_css::after,
+    &__input_css:checked ~ &__nav .nav__label_css::after,
+    &__input_css:hover ~ &__nav .nav__label_css::after {
         transform: scaleX(1);
     }
     
@@ -50,7 +62,9 @@
     &__input_all:checked ~ &__content_all,
     &__input_atoms:checked ~ &__content_atoms,
     &__input_molecules:checked ~ &__content_molecules,
-    &__input_organisms:checked ~ &__content_organisms {
+    &__input_organisms:checked ~ &__content_organisms,
+    &__input_html:checked ~ section &__content_html,
+    &__input_css:checked ~ section &__content_css {
         display: block;
     }
 }
