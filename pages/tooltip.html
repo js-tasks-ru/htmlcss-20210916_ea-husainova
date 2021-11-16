@@ -55,6 +55,87 @@
                                 <div class="tooltip__help">Helper Text</div>
                             </div>
                         </div>
+                        <div class="tabs">
+                            <input type="radio" id="#html-tab" name="nav" class="tabs__input tabs__input_html" checked>
+                            <input type="radio" id="#css-tab" name="nav" class="tabs__input tabs__input_css">
+                            <div class="tabs__nav page__box">
+                                <label for="#html-tab" class="nav__label nav__label_html">HTML</label>
+                                <label for="#css-tab" class="nav__label nav__label_css">CSS</label>
+                            </div>
+                            <section>
+                                <div class="tabs__content tabs__content_html">
+                                    <figure>
+                                        <pre>
+                                            <code>
+&lt;div class="tooltip"&gt;
+    &lt;svg class="tooltip__icon" width="24" height="24"&gt;
+        &lt;use xlink:href="../assets/icons/icons.svg#questionmark"&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+    &lt;div class="tooltip__help"&gt;Helper Text&lt;/div&gt;
+&lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                                <div class="tabs__content tabs__content_css">
+                                    <figure>
+                                        <pre>
+                                            <code>
+.tooltip {
+    display: inline-block;
+    position: relative;
+}
+
+.tooltip__icon {
+    cursor: pointer;
+}
+
+.toltip__icon_preview {
+    color: var(--royal-blue);
+}
+
+.toltip__icon_preview:hover ~ .tooltip__help {
+    display: block;
+}
+    
+    
+.tooltip__help {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%, -10px);
+    background-color: var(--royal-blue);
+    color: var(--grey-2);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 13px 21px 8px 21px;
+    white-space: nowrap;
+}
+
+.tooltip__help:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 13px));
+    border: 10px solid transparent;
+    border-top: 8px solid var(--royal-blue);
+}
+        
+.tooltip__help_preview {
+    display: block;
+}
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </main>

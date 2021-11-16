@@ -88,6 +88,157 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="tabs">
+                            <input type="radio" id="#html-tab" name="nav" class="tabs__input tabs__input_html" checked>
+                            <input type="radio" id="#css-tab" name="nav" class="tabs__input tabs__input_css">
+                            <div class="tabs__nav page__box">
+                                <label for="#html-tab" class="nav__label nav__label_html">HTML</label>
+                                <label for="#css-tab" class="nav__label nav__label_css">CSS</label>
+                            </div>
+                            <section>
+                                <div class="tabs__content tabs__content_html">
+                                    <figure>
+                                        <pre>
+                                            <code>
+&lt;div class="histogram"&gt;
+    &lt;div class="histogram__header"&gt;
+        &lt;div class="header__orders"&gt;Total orders&lt;/div&gt;
+        &lt;div class="header__view-control"&gt;View all&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="header__counter"&gt;50254&lt;/div&gt;
+    &lt;div class="histogram__chart"&gt;
+        &lt;div class="chart__column" style="height: 100%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 70%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 44%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 78%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 44%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 78%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 100%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 44%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 70%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 100%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 78%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 44%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 70%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 78%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 70%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 90%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 70%"&gt;&lt;/div&gt;
+        &lt;div class="chart__column" style="height: 34%"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                                <div class="tabs__content tabs__content_css">
+                                    <figure>
+                                        <pre>
+                                            <code>
+.histogram {
+    box-sizing: border-box;
+    border: 1px solid var(--grey-3);
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px 24px;
+}
+
+.histogram__block {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+    
+.histogram__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.histogram__chart {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 39px;
+    animation: appear 0.6s ease-out;
+}
+
+@keyframes appear {
+    0% {
+        transform: scaleY(0);
+        transform-origin: bottom center;
+    }
+
+    50% {
+        transform: scaleY(0);
+        transform-origin: bottom center;
+    }
+
+    100% {
+        transform: scaleY(1);
+        transform-origin: bottom center;
+    }
+}
+
+.header__orders {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--secondary-font);
+    line-height: 24px;
+}
+            
+.header__view-control {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--royal-blue);
+    line-height: 24px;
+}
+            
+.header__counter {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: var(--main-font);
+    line-height: 26px;
+}
+
+
+.chart__column {
+    background-color: var(--royal-blue);
+    margin-top: auto;
+    margin-right: 1px;
+    flex-basis: 9px;
+    flex-grow: 1;
+}
+
+.chart__column:last-child {
+    margin-right: 0px;
+}
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </main>

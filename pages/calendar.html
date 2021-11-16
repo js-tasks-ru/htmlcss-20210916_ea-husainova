@@ -102,7 +102,148 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                                                                              
+                        </div>  
+                        <div class="tabs">
+                            <input type="radio" id="#html-tab" name="nav" class="tabs__input tabs__input_html" checked>
+                            <input type="radio" id="#css-tab" name="nav" class="tabs__input tabs__input_css">
+                            <div class="tabs__nav page__box">
+                                <label for="#html-tab" class="nav__label nav__label_html">HTML</label>
+                                <label for="#css-tab" class="nav__label nav__label_css">CSS</label>
+                            </div>
+                            <section>
+                                <div class="tabs__content tabs__content_html">
+                                    <figure>
+                                        <pre>
+                                            <code>
+&lt;div class="calendar"&gt;
+    &lt;div class="calendar__title"&gt;October 2019&lt;/div&gt;
+    &lt;div class="calendar__wrapper"&gt;
+        &lt;div class="calendar__inner"&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;;Mon&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Tue&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Wed&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Thu&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Fri&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Sat&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Sun&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;1&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;2&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;3&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;4&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;5&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;6&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;7&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;8&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;9&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;10&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;11&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;12&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;13&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;14&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;15&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;16&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;17&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection-edge"&gt;18&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection"&gt;19&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection"&gt;20&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection"&gt;21&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection"&gt;22&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection-edge"&gt;23&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;24&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;25&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;26&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;27&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;28&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;29&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;30&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;31&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                                <div class="tabs__content tabs__content_css">
+                                    <figure>
+                                        <pre>
+                                            <code>
+.calendar {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid var(--grey-3);
+    border-radius: 8px;
+    padding: 5%;
+}
+                                                
+.calendar_size-small {
+    width: 100%;
+    max-width: 195px;
+}
+
+.calendar__title {
+    color: var(--month-font); 
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.calendar__wrapper {
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.calendar__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+}
+
+.calendar__item {
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    color: var(--day-font);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar__item_day {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: var(--week-font);
+}
+
+.calendar__item_selection-edge {
+    background-color: var(--royal-blue);
+    color: var(--white);
+}
+
+.calendar__item_selection {
+    background-color: var(--selection-bg);
+    color: var(--day-selected-font);
+}                                        
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                            </section>
+                        </div>                                                                            
                     </div>
                 </div>
             </main>

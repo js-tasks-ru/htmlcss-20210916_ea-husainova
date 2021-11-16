@@ -78,6 +78,117 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="tabs">
+                            <input type="radio" id="#html-tab" name="nav" class="tabs__input tabs__input_html" checked>
+                            <input type="radio" id="#css-tab" name="nav" class="tabs__input tabs__input_css">
+                            <div class="tabs__nav page__box">
+                                <label for="#html-tab" class="nav__label nav__label_html">HTML</label>
+                                <label for="#css-tab" class="nav__label nav__label_css">CSS</label>
+                            </div>
+                            <section>
+                                <div class="tabs__content tabs__content_html">
+                                    <figure>
+                                        <pre>
+                                            <code>
+&lt;button class="button button_primary" id="modal-open">Open modal&lt;/button&gt;
+&lt;div class="modal" id="modal"&gt;
+    &lt;div class="modal__content"&gt;
+        &lt;label class=" content__form-group form-group"&gt;
+            &lt;div class="form-group__title"&gt;Name&lt;/div&gt;
+            &lt;input type="text" class="form-group__input" placeholder="Placeholder"&gt;
+            &lt;svg class="form-group__icon form-group__icon_success"&gt;
+                &lt;use xlink:href="../../assets/icons/icons.svg#success"&gt;&lt;/svg&gt;
+            &lt;/svg&gt;
+            &lt;svg class="form-group__icon form-group__icon_error"&gt;
+                &lt;use xlink:href="../../assets/icons/icons.svg#error"&gt;&lt;/svg&gt;
+            &lt;/svg&gt; 
+        &lt;/label&gt;
+        &lt;label class="form-group"&gt;
+            &lt;div class="form-group__title"&gt;Email&lt;/div&gt;
+            &lt;input type="text" class="form-group__input" placeholder="Placeholder"&gt;
+            &lt;svg class="form-group__icon form-group__icon_success"&gt;
+                &lt;use xlink:href="../../assets/icons/icons.svg#success"&gt;&lt;/svg&gt;
+            &lt;/svg&gt;
+            &lt;svg class="form-group__icon form-group__icon_error"&gt;
+                &lt;use xlink:href="../../assets/icons/icons.svg#error"&gt;&lt;/svg&gt;
+            &lt;/svg&gt; 
+        &lt;/label&gt;
+        &lt;button class="button__form-group button button_primary"&gt;Submit&lt;/button&gt;
+        &lt;svg class="modal__button" id="modal-close"&gt;
+            &lt;use xlink:href="../assets/icons/icons.svg#cross"&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                                <div class="tabs__content tabs__content_css">
+                                    <figure>
+                                        <pre>
+                                            <code>
+.modal {
+    background-color: rgba(196, 196, 196, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal_preview {
+    display: block;
+    position: static;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+    
+.modal__content {
+    background-color: var(--main-bg);
+    border-radius: 8px;
+    width: 428px;
+    height: 318px;
+    padding: 30px 40px 33px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+    
+.modal__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    color: var(--cello);
+}
+    
+.modal__description {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--grey-4);
+}
+    
+    .modal__button {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </main>
