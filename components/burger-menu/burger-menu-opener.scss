@@ -1,0 +1,17 @@
+.burger-menu-opener {
+    &__logo {
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__button {
+        position: absolute;
+        left: 12px;
+    }
+
+    @media (min-width: 768px) {
+        & {
+            display: none !important;
+        }
+    }
+}

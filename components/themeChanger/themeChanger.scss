@@ -12,3 +12,9 @@
         margin: 0 14px;
     }
 }
+
+@media (max-width: 768px) {
+    .theme-changer {
+        display: none !important;
+    }
+}
