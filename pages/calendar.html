@@ -14,6 +14,40 @@
         <div class="page">
             <header class="header header_template">
                 <div class="page__box">
+                    <div class="burger-menu-opener">
+                        <button class="burger-menu-opener__button" id="burger-menu-open">
+                            <svg class="burger-menu__icon" id="menu">
+                                <use xlink:href="../assets/icons/icons.svg#menu"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="burger-menu" id="burger-menu">
+                        <div class="burger-menu__header">
+                            <div class="page__box">
+                                <button class="burger-menu__button burger-menu__button_close" id="burger-menu-close">
+                                    <svg class="burger-menu__icon menu__icon_close">
+                                        <use xlink:href="../assets/icons/icons.svg#crossBurger"></use>
+                                    </svg>
+                                </button>
+                                <div class="burger-menu__logo">
+                                    <svg class="logo__image">
+                                        <use xlink:href="../assets/icons/icons.svg#logo"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="burger-menu__body">
+                            <div class="burger-menu__section">
+                                <h4 class="burger-menu__section-title">Components</h4>
+                                <a href="./modal.html" class="burger-menu__section-link">Modal</a>
+                                <a href="./tooltip.html" class="burger-menu__section-link">Tooltip</a>
+                                <a href="./avatar.html" class="burger-menu__section-link">Avatar</a>
+                                <a href="./calendar.html" class="burger-menu__section-link burger-menu__section-link_active">Calendar</a>
+                                <a href="./histogram.html" class="burger-menu__section-link">Histogram</a>
+                                <a href="./customForm.html" class="burger-menu__section-link">Custom form elements</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="header__logo logo__wrapper">
                         <a href="../index.html">
                             <svg class="logo__image">
@@ -254,5 +288,6 @@
             </footer>
         </div>
         <script defer src="../../assets/scripts/theme-changer.js"></script>
+        <script src="../assets/scripts/burger-menu.js"></script>
     </body>
 </html>

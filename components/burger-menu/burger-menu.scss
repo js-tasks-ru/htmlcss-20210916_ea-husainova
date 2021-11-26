@@ -62,11 +62,11 @@
     &__button {
         position: absolute;
         left: 12px;
-    }
-    
-    @media (min-width: 768px) {
-        &__button {
-            display: none;
+    }   
+}
+
+@media (max-width: 768px) {
+        .burger-menu__section-link_active {
+            color: var(--tenne);
         }
-    }
 }
