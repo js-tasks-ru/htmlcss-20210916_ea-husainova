@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: flex-end;
     padding-top: 32px;
+    overflow: auto;
 
     &__body {
         display: flex;

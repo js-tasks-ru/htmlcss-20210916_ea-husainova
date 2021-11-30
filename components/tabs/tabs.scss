@@ -68,3 +68,11 @@
         display: block;
     }
 }
+
+@media (max-width: 768px) {
+    .tabs__nav {
+        display: flex;
+        overflow-x: scroll;
+        padding-left: 16px;
+    }
+}
