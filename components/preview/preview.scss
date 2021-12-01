@@ -24,11 +24,12 @@
     }
     
 @media (max-width: 768px) {
+    padding: 24px 0px;
+
     &__box {
         max-width: 1110px;
         width: 100%;
         margin: 0 auto;
-        padding: 0px 16px;
     }
 
     &__card {
@@ -39,6 +40,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(230px, auto));
         grid-gap: 16px;
+        padding: 0px 16px;
     }
 }
 }

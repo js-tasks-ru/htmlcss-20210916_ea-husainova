@@ -9,6 +9,11 @@
         margin: 0 auto;
     }
 
+    &__box_footer {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
 @media (max-width: 768px) {
     .page {
         min-height: 100%;
@@ -18,8 +23,12 @@
     }
 
     &__box {
-        max-width: 1110px;
-        width: 100%;
+        max-width: 100%;
+    }
+
+    &__box_footer {
+        margin: 0 16px;
+        width: auto;
     }
 }
 }
