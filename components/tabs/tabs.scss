@@ -70,9 +70,20 @@
 }
 
 @media (max-width: 768px) {
-    .tabs__nav {
-        display: flex;
+    .tabs {
         overflow: hidden;
-        padding-left: 16px;
+
+        &__nav {
+            display: flex;
+            overflow-x: scroll;
+            padding-left: 16px;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+            &::-webkit-scrollbar { /* WebKit */
+                width: 0;
+                height: 0;
+            }
+        }
     }
 }
