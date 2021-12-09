@@ -14,6 +14,13 @@
         margin: 0 auto;
     }
 
+    &_template {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 100%;
+    }
+
 @media (max-width: 768px) {
     .page {
         min-height: 100%;

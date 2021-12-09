@@ -47,13 +47,36 @@
         }
     }
     
-    @media (max-width: 768px) {
-        .header {
-            background-color: var(--alice-blue);
-        }
-    
-        .footer {
-            display: none;
-        }
+@media (max-width: 768px) {
+    .page__box_template {
+        display: block;
+        padding: 0px 16px;
     }
+
+    .header {
+        background-color: var(--alice-blue);
+    }
+
+    .header_template {
+        margin: 0px;
+    }
+
+    .main {
+        &__content {
+        flex-grow: 1;
+
+            .content__title {
+                font-size: 20px;
+            }
+
+            .content__component_input {
+                display: grid;
+                grid-template-columns: repeat(1, auto);
+                grid-template-rows: auto;
+                grid-gap: 30px;
+                grid-auto-flow: row;
+            }
+        }
+    }        
+}
 }

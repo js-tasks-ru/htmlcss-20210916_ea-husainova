@@ -85,5 +85,9 @@
                 height: 0;
             }
         }
+
+        &__content pre {
+            overflow-x: auto;
+        }
     }
 }
