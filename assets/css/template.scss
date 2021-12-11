@@ -1,6 +1,13 @@
 .page {
     background-color: var(--template-color);
 
+    &_template {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 100%;
+    }
+
     &__box_template {
         display: grid;
         grid-template-columns: 285px 1fr;

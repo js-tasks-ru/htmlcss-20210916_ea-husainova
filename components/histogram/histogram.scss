@@ -35,16 +35,16 @@
                 color: var(--royal-blue);
                 line-height: 24px;
             }
-            
-            &__counter {
-                font-family: "Inter", sans-serif;
-                font-weight: 400;
-                font-style: normal;
-                font-size: 20px;
-                color: var(--main-font);
-                line-height: 26px;
-            }
         }
+    }
+
+    &__counter {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 20px;
+        color: var(--main-font);
+        line-height: 26px;
     }
     
     &__chart {

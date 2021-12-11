@@ -11,6 +11,10 @@
     &__nav {
         overflow: hidden;
     }
+
+    &__content pre {
+        color: var(--main-font);
+    }
     
     &__input_all:focus ~ &__nav .nav__label_all,
     &__input_atoms:focus ~ &__nav .nav__label_atoms,
