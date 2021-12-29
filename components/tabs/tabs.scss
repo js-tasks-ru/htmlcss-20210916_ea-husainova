@@ -10,6 +10,15 @@
     
     &__nav {
         overflow: hidden;
+        padding-left: 16px;
+    }
+
+    &__divider {
+        background-color: var(--grey-2);
+        height: 1px;
+        width: 100vw;
+        position: absolute;
+        left: 0;
     }
 
     &__content pre {
@@ -60,7 +69,6 @@
     
     &__content {
         display: none;
-        border-top: 1px solid var(--grey-2);
     }
     
     &__input_all:checked ~ &__content_all,
@@ -88,6 +96,14 @@
                 width: 0;
                 height: 0;
             }
+        }
+
+        &__content_html {
+            padding: 16px;
+        }
+
+        &__content_css {
+            padding: 16px;
         }
 
         &__content pre {

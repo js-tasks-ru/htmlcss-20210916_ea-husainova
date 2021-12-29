@@ -74,3 +74,15 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .skeleton {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .skeleton__info {
+        flex-grow: 1;
+        width: auto;
+    }
+}

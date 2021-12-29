@@ -35,3 +35,20 @@
         height: 100%;
     }
 }
+
+@media (max-width: 768px) {
+    .section {
+        padding: 0px 16px;
+    }
+    .section__title {
+        font-size: 20px;
+    }
+    
+    .section__content_four-column {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(4, auto);
+        grid-auto-flow: column;
+        grid-gap: 16px;
+    }
+}
