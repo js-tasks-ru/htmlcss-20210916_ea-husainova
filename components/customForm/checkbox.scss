@@ -68,14 +68,6 @@
     &__input:focus ~ &__state &__label {
         text-decoration: underline;
     }
-    
-    &__grid {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(3, auto);
-        grid-auto-flow: column;
-        grid-gap: 20px;
-    }
 }
 
 @keyframes pulse {

@@ -7,30 +7,28 @@
         box-sizing: border-box;
         margin-bottom: 8px;
         padding: 24px 32px;
-
-        .item {
-            &__title {
-                font-family: "Inter", sans-serif;
-                font-size: 16px;
-                font-weight: 400;
-                font-style: normal;
-                color: var(--black-black);
-                line-height: 24px;
-            }
-            
-            &__title:first-child {
-                color: var(--black);
-            }
-            
-            &__body {
-                font-family: "Inter", sans-serif;
-                font-size: 16px;
-                font-weight: 400;
-                font-style: normal;
-                color: var(--grey-4);
-                line-height: 24px;
-            }
-        }
+    }
+        
+    &__item-title {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--black-black);
+        line-height: 24px;
+    }
+    
+    &__item-title:first-child {
+        color: var(--black);
+    }
+    
+    &__item-body {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--grey-4);
+        line-height: 24px;
     }
     
     &__item:last-child {
@@ -40,21 +38,21 @@
     &__summary {
         display: block;
         position: relative;
+    }
 
-        .summary__arrow {
-            width: 18px;
-            height: 10px;
-            position: absolute;
-            right: 0;
-            animation: crotation .5s;
-        }
+    &__summary-arrow {
+        width: 18px;
+        height: 10px;
+        position: absolute;
+        right: 0;
+        animation: crotation .5s;
     }
     
     &__summary::-webkit-details-marker {
         display: none;
     }
 
-    &__item[open] .summary__arrow {
+    &__item[open] &__summary-arrow {
         animation: rotation .5s;
         transform: rotate(180deg);
     }

@@ -11,7 +11,7 @@
                 <div class="page__box">
                     <div class="burger-menu-opener">
                         <button class="burger-menu-opener__button" id="burger-menu-open">
-                            <svg class="burger-menu__icon" id="menu">
+                            <svg class="burger-menu-opener__button-icon" id="menu">
                                 <use xlink:href="../assets/icons/icons.svg#menu"></use>
                             </svg>
                         </button>
@@ -20,12 +20,12 @@
                         <div class="burger-menu__header">
                             <div class="page__box">
                                 <button class="burger-menu__button burger-menu__button_close" id="burger-menu-close">
-                                    <svg class="burger-menu__icon menu__icon_close">
+                                    <svg class="burger-menu__button-icon menu__icon_close">
                                         <use xlink:href="../assets/icons/icons.svg#crossBurger"></use>
                                     </svg>
                                 </button>
                                 <div class="burger-menu__logo">
-                                    <svg class="logo__image">
+                                    <svg class="burger-menu__logo-image">
                                         <use xlink:href="../assets/icons/icons.svg#logo"></use>
                                     </svg>
                                 </div>
@@ -70,7 +70,7 @@
             </header>
             <main class="page__main">
                 <div class="page__box page__box_template">
-                    <div class="main__nav">
+                    <div class="nav main__nav">
                         <div class="nav__item nav__item_title">Components</div>
                         <a href="./modal.html"><div class="nav__item">Modal</div></a>
                         <a href="./tooltip.html"><div class="nav__item">Tooltip</div></a>
@@ -79,14 +79,14 @@
                         <a href="./histogram.html"><div class="nav__item">Histogram</div></a>
                         <a href="./customForm.html"><div class="nav__item nav__item_active">Custom form elements</div></a>
                     </div>
-                    <div class="main__content">
-                        <div class="content__title">Custom form elements</div>
-                        <div class="content__component content__component_input">
+                    <div class="template-content main__template-content">
+                        <div class="template-content__title">Custom form elements</div>
+                        <div class="template-content__component template-content__component_input">
                             <label class="radio">
                                 <input type="radio" class="radio__input" name="radio-name">
                                 <div class="radio__state">
                                     <div class="radio__control">
-                                        <div class="control__circle"></div>  
+                                        <div class="radio__circle"></div>  
                                     </div>
                                     <div class="radio__label">Default</div>
                                 </div>
@@ -95,7 +95,7 @@
                                 <input type="radio" class="radio__input" name="radio-name" checked>
                                 <div class="radio__state">
                                     <div class="radio__control">
-                                        <div class="control__circle"></div>
+                                        <div class="radio__circle"></div>
                                     </div>
                                     <div class="radio__label">Selected</div>
                                 </div>
@@ -104,7 +104,7 @@
                                 <input type="radio" class="radio__input" name="radio-name" disabled>
                                 <div class="radio__state">
                                     <div class="radio__control">
-                                        <div class="control__circle"></div>
+                                        <div class="radio__circle"></div>
                                     </div>
                                     <div class="radio__label">Disabled</div>
                                 </div>
@@ -171,7 +171,7 @@
                             </label>
                         </div>
                         <div class="content__component content__component_input">
-                            <label class="form-group form-group">
+                            <label class="form-group">
                                 <div class="form-group__title">Label</div>
                                 <input type="text" class="form-group__input">
                                 <div class="form-group__status">Some status</div>

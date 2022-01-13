@@ -33,25 +33,25 @@
         border-radius: 14px;
         box-sizing: border-box;
         position: relative;
+    }
 
-        .control__circle {
-            width: 18px;
-            height: 18px;
-            border-radius: 14px;
-            background-color: var(--royal-blue);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
-        }
+    &__circle {
+        width: 18px;
+        height: 18px;
+        border-radius: 14px;
+        background-color: var(--royal-blue);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
     }
 
     &__input:checked ~ &__state &__control {
         border: 2px solid var(--royal-blue);
     }
     
-    &__input:checked ~ &__state .control__circle {
+    &__input:checked ~ &__state &__circle {
         display: block;
     }
     

@@ -65,6 +65,9 @@ pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
   margin: 0px;
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
 }
 
 /* Text-level semantics

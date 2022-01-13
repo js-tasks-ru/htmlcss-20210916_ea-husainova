@@ -12,7 +12,7 @@
         display: block;
     }
     
-    &__icon {
+    &__button-icon {
         width: 24px;
         height: 24px;
     }
@@ -24,6 +24,12 @@
     &__logo {
         display: flex;
         justify-content: center;
+    }
+
+    &__logo-image {
+        width: 110px;
+        height: 32px;
+        color: var(--title-shapes);
     }
     
     &__section {

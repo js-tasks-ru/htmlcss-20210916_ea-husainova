@@ -2,6 +2,18 @@
     display: inline-block;
     position: relative;
 
+    &_modal {
+        margin-bottom: 15px;
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-auto-flow: column;
+        grid-gap: 20px;
+    }
+
     &__title {
         font-family: "Inter", sans-serif;
         font-weight: 500;
@@ -56,10 +68,6 @@
     &_error &__icon_error {
         display: block;
         color: var(--red);
-    }
-    
-    &__content {
-        margin-bottom: 15px;
     }
     
     &_error &__input {

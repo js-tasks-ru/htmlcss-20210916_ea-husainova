@@ -11,7 +11,7 @@
                 <div class="page__box">
                     <div class="burger-menu-opener">
                         <button class="burger-menu-opener__button" id="burger-menu-open">
-                            <svg class="burger-menu__icon" id="menu">
+                            <svg class="burger-menu-opener__button-icon" id="menu">
                                 <use xlink:href="../assets/icons/icons.svg#menu"></use>
                             </svg>
                         </button>
@@ -20,12 +20,12 @@
                         <div class="burger-menu__header">
                             <div class="page__box">
                                 <button class="burger-menu__button burger-menu__button_close" id="burger-menu-close">
-                                    <svg class="burger-menu__icon menu__icon_close">
+                                    <svg class="burger-menu__button-icon menu__icon_close">
                                         <use xlink:href="../assets/icons/icons.svg#crossBurger"></use>
                                     </svg>
                                 </button>
                                 <div class="burger-menu__logo">
-                                    <svg class="logo__image">
+                                    <svg class="burger-menu__logo-image">
                                         <use xlink:href="../assets/icons/icons.svg#logo"></use>
                                     </svg>
                                 </div>
@@ -70,7 +70,7 @@
             </header>
             <main class="page__main">
                 <div class="page__box page__box_template">
-                    <div class="main__nav">
+                    <div class="nav main__nav">
                         <div class="nav__item nav__item_title">Components</div>
                         <a href="./modal.html"><div class="nav__item nav__item_active">Modal</div></a>
                         <a href="./tooltip.html"><div class="nav__item">Tooltip</div></a>
@@ -79,13 +79,13 @@
                         <a href="./histogram.html"><div class="nav__item">Histogram</div></a>
                         <a href="./customForm.html"><div class="nav__item">Custom form elements</div></a>
                     </div>
-                    <div class="main__content">
-                        <div class="content__title">Modal</div>
-                        <div class="content__component">
+                    <div class="template-content main__template-content">
+                        <div class="template-content__title">Modal</div>
+                        <div class="template-content__component">
                             <button class="button button_primary" id="modal-open">Open modal</button>
                             <div class="modal" id="modal">
                                 <div class="modal__content">
-                                    <label class=" content__form-group form-group">
+                                    <label class="form-group">
                                         <div class="form-group__title">Name</div>
                                         <input type="text" class="form-group__input" placeholder="Placeholder">
                                         <svg class="form-group__icon form-group__icon_success">
@@ -105,8 +105,8 @@
                                             <use xlink:href="../assets/icons/icons.svg#error"></svg>
                                         </svg> 
                                     </label>
-                                    <button class="button__form-group button button_primary">Submit</button>
-                                    <svg class="modal__button" id="modal-close">
+                                    <button class="button button_primary">Submit</button>
+                                    <svg class="modal__button-icon" id="modal-close">
                                         <use xlink:href="../assets/icons/icons.svg#cross"></use>
                                     </svg>
                                 </div>
@@ -128,7 +128,7 @@
 &lt;button class="button button_primary" id="modal-open">Open modal&lt;/button&gt;
 &lt;div class="modal" id="modal"&gt;
     &lt;div class="modal__content"&gt;
-        &lt;label class=" content__form-group form-group"&gt;
+        &lt;label class="form-group"&gt;
             &lt;div class="form-group__title"&gt;Name&lt;/div&gt;
             &lt;input type="text" class="form-group__input" placeholder="Placeholder"&gt;
             &lt;svg class="form-group__icon form-group__icon_success"&gt;
@@ -148,8 +148,8 @@
                 &lt;use xlink:href="../assets/icons/icons.svg#error"&gt;&lt;/svg&gt;
             &lt;/svg&gt; 
         &lt;/label&gt;
-        &lt;button class="button__form-group button button_primary"&gt;Submit&lt;/button&gt;
-        &lt;svg class="modal__button" id="modal-close"&gt;
+        &lt;button class="button button_primary"&gt;Submit&lt;/button&gt;
+        &lt;svg class="modal__button-icon" id="modal-close"&gt;
             &lt;use xlink:href="../assets/icons/icons.svg#cross"&gt;&lt;/use&gt;
         &lt;/svg&gt;
     &lt;/div&gt;
@@ -210,7 +210,7 @@
     color: var(--grey-4);
 }
     
-    .modal__button {
+.modal__button-icon {
     height: 14px;
     width: 14px;
     position: absolute;

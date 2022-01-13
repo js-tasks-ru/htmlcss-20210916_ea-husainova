@@ -55,7 +55,7 @@
         margin-top: 39px;
         animation: appear 0.6s ease-out;
 
-        .chart__column {
+        .histogram__column {
             background-color: var(--royal-blue);
             margin-top: auto;
             margin-right: 1px;
@@ -63,7 +63,7 @@
             flex-grow: 1;
         }
         
-        .chart__column:last-child {
+        .histogram__column:last-child {
             margin-right: 0px;
         }
     }
