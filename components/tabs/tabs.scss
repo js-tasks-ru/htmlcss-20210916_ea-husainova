@@ -1,0 +1,113 @@
+.tabs {
+    &__input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        outline: none;
+        position: absolute;
+        clip: rect(0 0 0 0);
+    }
+    
+    &__nav {
+        overflow: hidden;
+        padding-left: 16px;
+    }
+
+    &__divider {
+        background-color: var(--grey-2);
+        height: 1px;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+    }
+
+    &__content pre {
+        color: var(--main-font);
+    }
+    
+    &__input_all:focus ~ &__nav .nav__label_all,
+    &__input_atoms:focus ~ &__nav .nav__label_atoms,
+    &__input_molecules:focus ~ &__nav .nav__label_molecules,
+    &__input_organisms:focus ~ &__nav .nav__label_organisms,
+    &__input_all:checked ~ &__nav .nav__label_all,
+    &__input_atoms:checked ~ &__nav .nav__label_atoms,
+    &__input_molecules:checked ~ &__nav .nav__label_molecules,
+    &__input_organisms:checked ~ &__nav .nav__label_organisms,
+    &__input_all:hover ~ &__nav .nav__label_all,
+    &__input_atoms:hover ~ &__nav .nav__label_atoms,
+    &__input_molecules:hover ~ &__nav .nav__label_molecules,
+    &__input_organisms:hover ~ &__nav .nav__label_organisms,
+    &__input_html:focus ~ &__nav .nav__label_html,
+    &__input_html:checked ~ &__nav .nav__label_html,
+    &__input_html:hover ~ &__nav .nav__label_html,
+    &__input_css:focus ~ &__nav .nav__label_css,
+    &__input_css:checked ~ &__nav .nav__label_css,
+    &__input_css:hover ~ &__nav .nav__label_css {
+        color: var(--tab-font);
+    }
+
+    &__input_all:focus ~ &__nav .nav__label_all::after,
+    &__input_atoms:focus ~ &__nav .nav__label_atoms::after,
+    &__input_molecules:focus ~ &__nav .nav__label_molecules::after,
+    &__input_organisms:focus ~ &__nav .nav__label_organisms::after,
+    &__input_all:checked ~ &__nav .nav__label_all::after,
+    &__input_atoms:checked ~ &__nav .nav__label_atoms::after,
+    &__input_molecules:checked ~ &__nav .nav__label_molecules::after,
+    &__input_organisms:checked ~ &__nav .nav__label_organisms::after,
+    &__input_all:hover ~ &__nav .nav__label_all::after,
+    &__input_atoms:hover ~ &__nav .nav__label_atoms::after,
+    &__input_molecules:hover ~ &__nav .nav__label_molecules::after,
+    &__input_organisms:hover ~ &__nav .nav__label_organisms::after,
+    &__input_html:focus ~ &__nav .nav__label_html::after,
+    &__input_html:checked ~ &__nav .nav__label_html::after,
+    &__input_html:hover ~ &__nav .nav__label_html::after,
+    &__input_css:focus ~ &__nav .nav__label_css::after,
+    &__input_css:checked ~ &__nav .nav__label_css::after,
+    &__input_css:hover ~ &__nav .nav__label_css::after {
+        transform: scaleX(1);
+    }
+    
+    &__content {
+        display: none;
+    }
+    
+    &__input_all:checked ~ &__content_all,
+    &__input_atoms:checked ~ &__content_atoms,
+    &__input_molecules:checked ~ &__content_molecules,
+    &__input_organisms:checked ~ &__content_organisms,
+    &__input_html:checked ~ section &__content_html,
+    &__input_css:checked ~ section &__content_css {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabs {
+        overflow: hidden;
+
+        &__nav {
+            display: flex;
+            overflow-x: scroll;
+            padding-left: 16px;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+            &::-webkit-scrollbar { /* WebKit */
+                width: 0;
+                height: 0;
+            }
+        }
+
+        &__content_html {
+            padding: 16px;
+        }
+
+        &__content_css {
+            padding: 16px;
+        }
+
+        &__content pre {
+            overflow-x: auto;
+        }
+    }
+}

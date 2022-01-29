@@ -2,74 +2,240 @@
 <html lang="ru">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../assets/css/normalize.css">
-        <link rel="stylesheet" href="../assets/css/main.css">
-        <link rel="stylesheet" href="../pages/template.css">
-        <link rel="stylesheet" href="../components/nav/nav.css">
-        <link rel="stylesheet" href="../components/logo/logo.css">
-        <link rel="stylesheet" href="../components/button/button.css">
-        <link rel="stylesheet" href="../components/modal/modal.css">
-        <link rel="stylesheet" href="../components/customForm/input.css">
-        <link rel="stylesheet" href="../components/button/button.css">
+        <link rel="stylesheet" href="../build/index.css">
+        <link rel="stylesheet" href="../build/template.css">
     </head>
     <body>
-        <div class="page">
-            <div class="page__spacing"></div>
-            <div class="page__header">
-                <div class="header__logo logo__wrapper">
-                    <div class="logo__square"></div>
-                    <div class="logo__circle"></div>
-                    <div class="logo__triangle"></div>
-                </div>
-            </div>
-            <div class="page__spacing"></div>
-            <div class="page__nav">
-                <div class="nav__item nav__item_title">Components</div>
-                <div class="nav__item nav__item_active">Modal</div>
-                <div class="nav__item">Tooltip</div>
-                <div class="nav__item">Avatar</div>
-                <div class="nav__item">Calendar</div>
-                <div class="nav__item">Histogram</div>
-                <div class="nav__item">Custom form elements</div>
-            </div>
-            <div class="page__content">
-                <div class="content__title">Modal</div>
-                <div class="content__component">
-                    <button class="button button_primary" id="modal-open">Open modal</button>
-                    <div class="modal" id="modal">
-                        <div class="modal__content">
-                            <label class=" content__form-group form-group">
-                                <div class="form-group__title">Name</div>
-                                <input type="text" class="form-group__input" placeholder="Placeholder">
-                                <svg class="form-group__icon form-group__icon_success">
-                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
-                                </svg>
-                                <svg class="form-group__icon form-group__icon_error">
-                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
-                                </svg> 
+        <div class="page page_template">
+            <header class="header header_template">
+                <div class="page__box">
+                    <div class="burger-menu-opener">
+                        <button class="burger-menu-opener__button" id="burger-menu-open">
+                            <svg class="burger-menu-opener__button-icon" id="menu">
+                                <use xlink:href="../assets/icons/icons.svg#menu"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="burger-menu" id="burger-menu">
+                        <div class="burger-menu__header">
+                            <div class="page__box">
+                                <button class="burger-menu__button burger-menu__button_close" id="burger-menu-close">
+                                    <svg class="burger-menu__button-icon menu__icon_close">
+                                        <use xlink:href="../assets/icons/icons.svg#crossBurger"></use>
+                                    </svg>
+                                </button>
+                                <div class="burger-menu__logo">
+                                    <svg class="burger-menu__logo-image">
+                                        <use xlink:href="../assets/icons/icons.svg#logo"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="burger-menu__body">
+                            <div class="burger-menu__section">
+                                <h4 class="burger-menu__section-title">Components</h4>
+                                <a href="./modal.html" class="burger-menu__section-link burger-menu__section-link_active">Modal</a>
+                                <a href="./tooltip.html" class="burger-menu__section-link">Tooltip</a>
+                                <a href="./avatar.html" class="burger-menu__section-link">Avatar</a>
+                                <a href="./calendar.html" class="burger-menu__section-link">Calendar</a>
+                                <a href="./histogram.html" class="burger-menu__section-link">Histogram</a>
+                                <a href="./customForm.html" class="burger-menu__section-link">Custom form elements</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__logo logo__wrapper">
+                        <a href="../index.html">
+                            <svg class="logo__image">
+                                <use xlink:href="../assets/icons/icons.svg#logo"></use>
+                            </svg>
+                        </a>
+                        <div class="theme-changer">
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../assets/icons/icons.svg#sun"></use>
+                            </svg>
+                            <label class="toggler theme-changer__toggler">
+                                <input type="checkbox" class="toggler__input" id="theme-changer">
+                                <div class="toggler__state">
+                                    <div class="toggler__control">
+                                        <div class="toggler__circle"></div>
+                                    </div>
+                                </div>
                             </label>
-                            <label class="form-group">
-                                <div class="form-group__title">Email</div>
-                                <input type="text" class="form-group__input" placeholder="Placeholder">
-                                <svg class="form-group__icon form-group__icon_success">
-                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
-                                </svg>
-                                <svg class="form-group__icon form-group__icon_error">
-                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
-                                </svg> 
-                            </label>
-                            <button class="button__form-group button button_primary">Submit</button>
-                            <svg class="modal__button" id="modal-close">
-                                <use xlink:href="../assets/icons/icons.svg#cross"></use>
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../assets/icons/icons.svg#moon"></use>
                             </svg>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="page__spacing"></div>
-            <div class="page__footer">Reusable component library</div>
-            </div>
+            </header>
+            <main class="page__main">
+                <div class="page__box page__box_template">
+                    <div class="nav main__nav">
+                        <div class="nav__item nav__item_title">Components</div>
+                        <a href="./modal.html"><div class="nav__item nav__item_active">Modal</div></a>
+                        <a href="./tooltip.html"><div class="nav__item">Tooltip</div></a>
+                        <a href="./avatar.html"><div class="nav__item">Avatar</div></a>
+                        <a href="./calendar.html"><div class="nav__item">Calendar</div></a>
+                        <a href="./histogram.html"><div class="nav__item">Histogram</div></a>
+                        <a href="./customForm.html"><div class="nav__item">Custom form elements</div></a>
+                    </div>
+                    <div class="template-content main__template-content">
+                        <div class="template-content__title">Modal</div>
+                        <div class="template-content__component">
+                            <button class="button button_primary" id="modal-open">Open modal</button>
+                            <div class="modal" id="modal">
+                                <div class="modal__content">
+                                    <label class="form-group">
+                                        <div class="form-group__title">Name</div>
+                                        <input type="text" class="form-group__input" placeholder="Placeholder">
+                                        <svg class="form-group__icon form-group__icon_success">
+                                            <use xlink:href="../assets/icons/icons.svg#success"></svg>
+                                        </svg>
+                                        <svg class="form-group__icon form-group__icon_error">
+                                            <use xlink:href="../assets/icons/icons.svg#error"></svg>
+                                        </svg> 
+                                    </label>
+                                    <label class="form-group">
+                                        <div class="form-group__title">Email</div>
+                                        <input type="text" class="form-group__input" placeholder="Placeholder">
+                                        <svg class="form-group__icon form-group__icon_success">
+                                            <use xlink:href="../assets/icons/icons.svg#success"></svg>
+                                        </svg>
+                                        <svg class="form-group__icon form-group__icon_error">
+                                            <use xlink:href="../assets/icons/icons.svg#error"></svg>
+                                        </svg> 
+                                    </label>
+                                    <button class="button button_primary">Submit</button>
+                                    <svg class="modal__button-icon" id="modal-close">
+                                        <use xlink:href="../assets/icons/icons.svg#cross"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <input type="radio" id="#html-tab" name="nav" class="tabs__input tabs__input_html" checked>
+                            <input type="radio" id="#css-tab" name="nav" class="tabs__input tabs__input_css">
+                            <div class="tabs__nav page__box">
+                                <label for="#html-tab" class="nav__label nav__label_html">HTML</label>
+                                <label for="#css-tab" class="nav__label nav__label_css">CSS</label>
+                            </div>
+                            <section>
+                                <div class="tabs__divider"></div>
+                                <div class="tabs__content tabs__content_html">
+                                    <figure>
+                                        <pre>
+                                            <code class="language-html">
+&lt;button class="button button_primary" id="modal-open">Open modal&lt;/button&gt;
+&lt;div class="modal" id="modal"&gt;
+    &lt;div class="modal__content"&gt;
+        &lt;label class="form-group"&gt;
+            &lt;div class="form-group__title"&gt;Name&lt;/div&gt;
+            &lt;input type="text" class="form-group__input" placeholder="Placeholder"&gt;
+            &lt;svg class="form-group__icon form-group__icon_success"&gt;
+                &lt;use xlink:href="../assets/icons/icons.svg#success"&gt;&lt;/svg&gt;
+            &lt;/svg&gt;
+            &lt;svg class="form-group__icon form-group__icon_error"&gt;
+                &lt;use xlink:href="../assets/icons/icons.svg#error"&gt;&lt;/svg&gt;
+            &lt;/svg&gt; 
+        &lt;/label&gt;
+        &lt;label class="form-group"&gt;
+            &lt;div class="form-group__title"&gt;Email&lt;/div&gt;
+            &lt;input type="text" class="form-group__input" placeholder="Placeholder"&gt;
+            &lt;svg class="form-group__icon form-group__icon_success"&gt;
+                &lt;use xlink:href="../assets/icons/icons.svg#success"&gt;&lt;/svg&gt;
+            &lt;/svg&gt;
+            &lt;svg class="form-group__icon form-group__icon_error"&gt;
+                &lt;use xlink:href="../assets/icons/icons.svg#error"&gt;&lt;/svg&gt;
+            &lt;/svg&gt; 
+        &lt;/label&gt;
+        &lt;button class="button button_primary"&gt;Submit&lt;/button&gt;
+        &lt;svg class="modal__button-icon" id="modal-close"&gt;
+            &lt;use xlink:href="../assets/icons/icons.svg#cross"&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                                <div class="tabs__content tabs__content_css">
+                                    <figure>
+                                        <pre>
+                                            <code class="language-css">
+.modal {
+    background-color: rgba(196, 196, 196, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal_preview {
+    display: block;
+    position: static;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+    
+.modal__content {
+    background-color: var(--main-bg);
+    border-radius: 8px;
+    width: 428px;
+    height: 318px;
+    padding: 30px 40px 33px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+    
+.modal__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    color: var(--cello);
+}
+    
+.modal__description {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--grey-4);
+}
+    
+.modal__button-icon {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer footer_template">
+                <div class="page__box">
+                    <p class="footer__description footer__description_template">Reusable component library</p>
+                </div>
+            </footer>
         </div>
-        <script src="../assets/scripts/modal.js"></script> 
+        <script src="../assets/scripts/modal.js"></script>
+        <script defer src="../assets/scripts/theme-changer.js"></script>
+        <script src="../assets/scripts/burger-menu.js"></script>
+        <script defer src="../assets/scripts/prism.js"></script>
     </body>
 </html>

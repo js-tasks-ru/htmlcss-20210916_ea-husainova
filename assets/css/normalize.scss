@@ -64,6 +64,10 @@ hr {
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+  margin: 0px;
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
 }
 
 /* Text-level semantics
@@ -75,6 +79,7 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 /**
@@ -346,4 +351,15 @@ template {
 
 [hidden] {
   display: none;
+}
+
+figure {
+  margin: 0;
+}
+
+button {
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  background-color: transparent;
 }

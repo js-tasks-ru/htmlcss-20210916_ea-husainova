@@ -1,91 +1,295 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
+        <style>
+            html {
+                background: var(--main-bg);
+            }
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../assets/css/normalize.css">
-        <link rel="stylesheet" href="../assets/css/main.css">
-        <link rel="stylesheet" href="../pages/template.css">
-        <link rel="stylesheet" href="../components/nav/nav.css">
-        <link rel="stylesheet" href="../components/logo/logo.css">
-        <link rel="stylesheet" href="../components/calendar/calendar.css">
+        <link rel="stylesheet" href="../build/index.css">
+        <link rel="stylesheet" href="../build/template.css">
     </head>
     <body>
-        <div class="page">
-            <div class="page__spacing"></div>
-            <div class="page__header">
-                <div class="header__logo logo__wrapper">
-                    <div class="logo__square"></div>
-                    <div class="logo__circle"></div>
-                    <div class="logo__triangle"></div>
-                </div>
-            </div>
-            <div class="page__spacing"></div>
-            <div class="page__nav">
-                <div class="nav__item nav__item_title">Components</div>
-                <div class="nav__item">Modal</div>
-                <div class="nav__item">Tooltip</div>
-                <div class="nav__item">Avatar</div>
-                <div class="nav__item nav__item_active">Calendar</div>
-                <div class="nav__item">Histogram</div>
-                <div class="nav__item">Custom form elements</div>
-            </div>
-            <div class="page__content">
-                <div class="content__title">Calendar</div>
-                <div class="content__component">
-                    <div class="calendar">
-                        <div class="calendar__title">October 2019</div>
-                        <div class="calendar__wrapper">
-                            <div class="calendar__inner">
-                                <div class="calendar__item calendar__item_day">Mon</div>
-                                <div class="calendar__item calendar__item_day">Tue</div>
-                                <div class="calendar__item calendar__item_day">Wed</div>
-                                <div class="calendar__item calendar__item_day">Thu</div>
-                                <div class="calendar__item calendar__item_day">Fri</div>
-                                <div class="calendar__item calendar__item_day">Sat</div>
-                                <div class="calendar__item calendar__item_day">Sun</div>
-                                <div class="calendar__item"></div>
-                                <div class="calendar__item"></div>
-                                <div class="calendar__item"></div>
-                                <div class="calendar__item"></div>
-                                <div class="calendar__item">1</div>
-                                <div class="calendar__item">2</div>
-                                <div class="calendar__item">3</div>
-                                <div class="calendar__item">4</div>
-                                <div class="calendar__item">5</div>
-                                <div class="calendar__item">6</div>
-                                <div class="calendar__item">7</div>
-                                <div class="calendar__item">8</div>
-                                <div class="calendar__item">9</div>
-                                <div class="calendar__item">10</div>
-                                <div class="calendar__item">11</div>
-                                <div class="calendar__item">12</div>
-                                <div class="calendar__item">13</div>
-                                <div class="calendar__item">14</div>
-                                <div class="calendar__item">15</div>
-                                <div class="calendar__item">16</div>
-                                <div class="calendar__item">17</div>
-                                <div class="calendar__item calendar__item_selection-edge">18</div>
-                                <div class="calendar__item calendar__item_selection">19</div>
-                                <div class="calendar__item calendar__item_selection">20</div>
-                                <div class="calendar__item calendar__item_selection">21</div>
-                                <div class="calendar__item calendar__item_selection">22</div>
-                                <div class="calendar__item calendar__item_selection-edge">23</div>
-                                <div class="calendar__item">24</div>
-                                <div class="calendar__item">25</div>
-                                <div class="calendar__item">26</div>
-                                <div class="calendar__item">27</div>
-                                <div class="calendar__item">28</div>
-                                <div class="calendar__item">29</div>
-                                <div class="calendar__item">30</div>
-                                <div class="calendar__item">31</div>
+        <div class="page page_template">
+            <header class="header header_template">
+                <div class="page__box">
+                    <div class="burger-menu-opener">
+                        <button class="burger-menu-opener__button" id="burger-menu-open">
+                            <svg class="burger-menu-opener__button-icon" id="menu">
+                                <use xlink:href="../assets/icons/icons.svg#menu"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="burger-menu" id="burger-menu">
+                        <div class="burger-menu__header">
+                            <div class="page__box">
+                                <button class="burger-menu__button burger-menu__button_close" id="burger-menu-close">
+                                    <svg class="burger-menu__button-icon menu__icon_close">
+                                        <use xlink:href="../assets/icons/icons.svg#crossBurger"></use>
+                                    </svg>
+                                </button>
+                                <div class="burger-menu__logo">
+                                    <svg class="burger-menu__logo-image">
+                                        <use xlink:href="../assets/icons/icons.svg#logo"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="burger-menu__body">
+                            <div class="burger-menu__section">
+                                <h4 class="burger-menu__section-title">Components</h4>
+                                <a href="./modal.html" class="burger-menu__section-link">Modal</a>
+                                <a href="./tooltip.html" class="burger-menu__section-link">Tooltip</a>
+                                <a href="./avatar.html" class="burger-menu__section-link">Avatar</a>
+                                <a href="./calendar.html" class="burger-menu__section-link burger-menu__section-link_active">Calendar</a>
+                                <a href="./histogram.html" class="burger-menu__section-link">Histogram</a>
+                                <a href="./customForm.html" class="burger-menu__section-link">Custom form elements</a>
                             </div>
                         </div>
                     </div>
+                    <div class="header__logo logo__wrapper">
+                        <a href="../index.html">
+                            <svg class="logo__image">
+                                <use xlink:href="../assets/icons/icons.svg#logo"></use>
+                            </svg>
+                        </a>
+                        <div class="theme-changer">
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../assets/icons/icons.svg#sun"></use>
+                            </svg>
+                            <label class="toggler theme-changer__toggler">
+                                <input type="checkbox" class="toggler__input" id="theme-changer">
+                                <div class="toggler__state">
+                                    <div class="toggler__control">
+                                        <div class="toggler__circle"></div>
+                                    </div>
+                                </div>
+                            </label>
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../assets/icons/icons.svg#moon"></use>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="page__spacing"></div>
-            <div class="page__footer">Reusable component library</div>
-            </div>
+            </header>
+            <main class="page__main">
+                <div class="page__box page__box_template">
+                    <div class="nav main__nav">
+                        <div class="nav__item nav__item_title">Components</div>
+                        <a href="./modal.html"><div class="nav__item">Modal</div></a>
+                        <a href="./tooltip.html"><div class="nav__item">Tooltip</div></a>
+                        <a href="./avatar.html"><div class="nav__item">Avatar</div></a>
+                        <a href="./calendar.html"><div class="nav__item nav__item_active">Calendar</div></a>
+                        <a href="./histogram.html"><div class="nav__item">Histogram</div></a>
+                        <a href="./customForm.html"><div class="nav__item">Custom form elements</div></a>
+                    </div>
+                    <div class="template-content main__template-content">
+                        <div class="template-content__title">Calendar</div>
+                        <div class="template-content__component">
+                            <div class="calendar">
+                                <div class="calendar__title">October 2019</div>
+                                <div class="calendar__wrapper">
+                                    <div class="calendar__inner">
+                                        <div class="calendar__item calendar__item_day">Mon</div>
+                                        <div class="calendar__item calendar__item_day">Tue</div>
+                                        <div class="calendar__item calendar__item_day">Wed</div>
+                                        <div class="calendar__item calendar__item_day">Thu</div>
+                                        <div class="calendar__item calendar__item_day">Fri</div>
+                                        <div class="calendar__item calendar__item_day">Sat</div>
+                                        <div class="calendar__item calendar__item_day">Sun</div>
+                                        <div class="calendar__item"></div>
+                                        <div class="calendar__item"></div>
+                                        <div class="calendar__item"></div>
+                                        <div class="calendar__item"></div>
+                                        <div class="calendar__item">1</div>
+                                        <div class="calendar__item">2</div>
+                                        <div class="calendar__item">3</div>
+                                        <div class="calendar__item">4</div>
+                                        <div class="calendar__item">5</div>
+                                        <div class="calendar__item">6</div>
+                                        <div class="calendar__item">7</div>
+                                        <div class="calendar__item">8</div>
+                                        <div class="calendar__item">9</div>
+                                        <div class="calendar__item">10</div>
+                                        <div class="calendar__item">11</div>
+                                        <div class="calendar__item">12</div>
+                                        <div class="calendar__item">13</div>
+                                        <div class="calendar__item">14</div>
+                                        <div class="calendar__item">15</div>
+                                        <div class="calendar__item">16</div>
+                                        <div class="calendar__item">17</div>
+                                        <div class="calendar__item calendar__item_selection-edge">18</div>
+                                        <div class="calendar__item calendar__item_selection">19</div>
+                                        <div class="calendar__item calendar__item_selection">20</div>
+                                        <div class="calendar__item calendar__item_selection">21</div>
+                                        <div class="calendar__item calendar__item_selection">22</div>
+                                        <div class="calendar__item calendar__item_selection-edge">23</div>
+                                        <div class="calendar__item">24</div>
+                                        <div class="calendar__item">25</div>
+                                        <div class="calendar__item">26</div>
+                                        <div class="calendar__item">27</div>
+                                        <div class="calendar__item">28</div>
+                                        <div class="calendar__item">29</div>
+                                        <div class="calendar__item">30</div>
+                                        <div class="calendar__item">31</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="tabs">
+                            <input type="radio" id="#html-tab" name="nav" class="tabs__input tabs__input_html" checked>
+                            <input type="radio" id="#css-tab" name="nav" class="tabs__input tabs__input_css">
+                            <div class="tabs__nav page__box">
+                                <label for="#html-tab" class="nav__label nav__label_html">HTML</label>
+                                <label for="#css-tab" class="nav__label nav__label_css">CSS</label>
+                            </div>
+                            <section>
+                                <div class="tabs__divider"></div>
+                                <div class="tabs__content tabs__content_html">
+                                    <figure>
+                                        <pre>
+                                            <code class="language-html">
+&lt;div class="calendar"&gt;
+    &lt;div class="calendar__title"&gt;October 2019&lt;/div&gt;
+    &lt;div class="calendar__wrapper"&gt;
+        &lt;div class="calendar__inner"&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;;Mon&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Tue&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Wed&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Thu&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Fri&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Sat&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_day"&gt;Sun&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;1&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;2&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;3&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;4&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;5&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;6&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;7&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;8&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;9&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;10&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;11&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;12&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;13&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;14&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;15&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;16&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;17&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection-edge"&gt;18&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection"&gt;19&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection"&gt;20&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection"&gt;21&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection"&gt;22&lt;/div&gt;
+            &lt;div class="calendar__item calendar__item_selection-edge"&gt;23&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;24&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;25&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;26&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;27&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;28&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;29&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;30&lt;/div&gt;
+            &lt;div class="calendar__item"&gt;31&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                                <div class="tabs__content tabs__content_css">
+                                    <figure>
+                                        <pre>
+                                            <code class="language-css">
+.calendar {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid var(--grey-3);
+    border-radius: 8px;
+    padding: 5%;
+}
+                                                
+.calendar_size-small {
+    width: 100%;
+    max-width: 195px;
+}
+
+.calendar__title {
+    color: var(--month-font); 
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.calendar__wrapper {
+    position: relative;
+    padding-bottom: 100%;
+}
+
+.calendar__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+}
+
+.calendar__item {
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    color: var(--day-font);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar__item_day {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: var(--week-font);
+}
+
+.calendar__item_selection-edge {
+    background-color: var(--royal-blue);
+    color: var(--white);
+}
+
+.calendar__item_selection {
+    background-color: var(--selection-bg);
+    color: var(--day-selected-font);
+}                                        
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                            </section>
+                        </div>                                                                            
+                    </div>
+                </div>
+            </main>
+            <footer class="footer footer_template">
+                <div class="page__box">
+                    <p class="footer__description footer__description_template">Reusable component library</p>
+                </div>
+            </footer>
         </div>
+        <script defer src="../assets/scripts/theme-changer.js"></script>
+        <script src="../assets/scripts/burger-menu.js"></script>
+        <script defer src="../assets/scripts/prism.js"></script>
     </body>
 </html>

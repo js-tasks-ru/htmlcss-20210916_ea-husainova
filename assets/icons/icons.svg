@@ -35,9 +35,9 @@
         <path d="M6 6L18 18" stroke="#212429" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
     <g id="logo" viewBox="0 0 110 32">
-        <rect y="1" width="30" height="30" fill="#212429"/>
-        <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
-        <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+        <rect y="1" width="30" height="30" fill="CurrentColor"/>
+        <rect x="38" width="32" height="32" rx="16" fill="CurrentColor"/>
+        <path d="M78 0L110 32H78V0Z" fill="CurrentColor"/>
     </g>
     <g id="sun" viewBox="0 0 24 24" fill="CurrentColor">
         <path d="m12 8c-2.20914 0-4 1.79086-4 4 0 2.2091 1.79086 4 4 4 2.2091 0 4-1.7909 4-4 0-2.20914-1.7909-4-4-4zm-6 4c0-3.31371 2.68629-6 6-6 3.3137 0 6 2.68629 6 6 0 3.3137-2.6863 6-6 6-3.31371 0-6-2.6863-6-6z"/>

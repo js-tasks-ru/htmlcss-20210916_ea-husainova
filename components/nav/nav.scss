@@ -1,0 +1,59 @@
+.nav {
+    &__item {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--main-font);
+    }
+    
+    &__item_title {
+        font-size: 20px;
+        line-height: 26px;
+        color: var(--black-black);
+        margin-bottom: 16px;
+    }
+    
+    &__item_active {
+        color: var(--tenne);
+    }
+    
+    &__label {
+        font-family: "Inter", "sans-serif";
+        font-size: 16px;
+        color: var(--grey-3);
+        padding: 8px 0;
+        margin-right: 40px;
+        cursor: pointer;
+        display: inline-block;
+        border-bottom: 5px solid transparent;
+        position: relative;
+    }
+
+    &__label::after {
+        content: '';
+        position: absolute;
+        background-color: var(--title-shapes);
+        height: 5px;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        transition: transform 250ms ease-in-out;
+        transform: scaleX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .main__nav {
+        display: none;
+    }
+
+    .nav__label {
+        margin-right: 40px;
+    }
+
+    .nav__label_all {
+        white-space: nowrap;
+    }
+}

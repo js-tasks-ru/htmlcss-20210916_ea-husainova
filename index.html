@@ -2,37 +2,72 @@
 <!-- Главная страница -->
 <html lang="ru">
     <head>
+        <style>
+            html {
+                background: var(--main-bg);
+            }
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" href="./assets/css/normalize.css">
-        <link rel="stylesheet" href="./assets/css/main.css">
-        <link rel="stylesheet" href="./components/page/page.css">
-        <link rel="stylesheet" href="./components/header/header.css">
-        <link rel="stylesheet" href="./components/preview/preview.css">
-        <link rel="stylesheet" href="./components/card/card.css">
-        <link rel="stylesheet" href="./components/footer/footer.css">
-        <link rel="stylesheet" href="./components/logo/logo.css">
-        <link rel="stylesheet" href="./components/tabs/tabs.css">
-        <link rel="stylesheet" href="./components/tooltip/tooltip.css">
-        <link rel="stylesheet" href="./components/customForm/radio.css">
-        <link rel="stylesheet" href="./components/customForm/checkbox.css">
-        <link rel="stylesheet" href="./components/customForm/toggle.css">
-        <link rel="stylesheet" href="./components/calendar/calendar.css">
-        <link rel="stylesheet" href="./components/histogram/histogram.css">
-        <link rel="stylesheet" href="./components/avatar/avatar.css">
-        <link rel="stylesheet" href="./components/modal/modal.css">
-        <link rel="stylesheet" href="./components/button/button.css">
-        <link rel="stylesheet" href="./components/customForm/input.css">
-        <link rel="stylesheet" href="./components/section/section.css">
-        <link rel="stylesheet" href="./components/sceleton/sceleton.css">
+        <link rel="stylesheet" href="./build/index.css">
     </head>
     <body>
         <div class="page">
             <header class="header">
                 <div class="page__box">
+                    <div class="burger-menu-opener">
+                        <button class="burger-menu-opener__button" id="burger-menu-open">
+                            <svg class="burger-menu-opener__button-icon" id="menu">
+                                <use xlink:href="./assets/icons/icons.svg#menu"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="burger-menu" id="burger-menu">
+                        <div class="burger-menu__header">
+                            <div class="page__box">
+                                <button class="burger-menu__button burger-menu__button_close" id="burger-menu-close">
+                                    <svg class="burger-menu__button-icon menu__button-icon_close">
+                                        <use xlink:href="./assets/icons/icons.svg#crossBurger"></use>
+                                    </svg>
+                                </button>
+                                <div class="burger-menu__logo">
+                                    <svg class="burger-menu__logo-image">
+                                        <use xlink:href="./assets/icons/icons.svg#logo"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="burger-menu__body">
+                            <div class="burger-menu__section">
+                                <h4 class="burger-menu__section-title">Components</h4>
+                                <a href="./pages/modal.html" class="burger-menu__section-link">Modal</a>
+                                <a href="./pages/tooltip.html" class="burger-menu__section-link">Tooltip</a>
+                                <a href="./pages/avatar.html" class="burger-menu__section-link">Avatar</a>
+                                <a href="./pages/calendar.html" class="burger-menu__section-link">Calendar</a>
+                                <a href="./pages/histogram.html" class="burger-menu__section-link">Histogram</a>
+                                <a href="./pages/customForm.html" class="burger-menu__section-link">Custom form elements</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="header__logo logo__wrapper">
-                        <div class="logo__square"></div>
-                        <div class="logo__circle"></div>
-                        <div class="logo__triangle"></div>
+                        <svg class="logo__image">
+                            <use xlink:href="./assets/icons/icons.svg#logo"></use>
+                        </svg>
+                        <div class="theme-changer">
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="./assets/icons/icons.svg#sun"></use>
+                            </svg>
+                            <label class="toggler theme-changer__toggler">
+                                <input type="checkbox" class="toggler__input" id="theme-changer">
+                                <div class="toggler__state">
+                                    <div class="toggler__control">
+                                        <div class="toggler__circle"></div>
+                                    </div>
+                                </div>
+                            </label>
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="./assets/icons/icons.svg#moon"></use>
+                            </svg>
+                        </div>
                     </div>
                     <h1 class="header__title">Reusable component library</h1>
                 </div>
@@ -48,11 +83,11 @@
                     <label for="#molecules-tab" class="nav__label nav__label_molecules">Molecules</label>
                     <label for="#organisms-tab" class="nav__label nav__label_organisms">Organisms</label>
                 </div>
-
+                <div class="tabs__divider"></div>
                 <div class="tabs__content tabs__content_all preview">
                     <div class="page__box preview__box">
                         <div class="preview__card-wrapper">
-                            <div class="card preview__card">
+                            <a href="./pages/tooltip.html" class="card preview__card">
                                 <div class="card__body card__body_tooltip">
                                     <div class="tooltip">
                                         <svg class="tooltip__icon tooltip__icon_preview" width="24" height="24">
@@ -65,10 +100,10 @@
                                   <div class="card__title">Tooltip</div>
                                   <div class="card__text">Container</div>
                                 </div>
-                            </div>
-                            <div class="card preview__card">
+                            </a>
+                            <a href="./pages/customForm.html" class="card preview__card">
                                 <div class="card__body">
-                                    <div class="checkbox__grid">
+                                    <div class="form-group-grid">
                                         <label class="checkbox">
                                             <input type="checkbox" class="checkbox__input">
                                             <div class="checkbox__state">
@@ -106,7 +141,7 @@
                                             <input type="radio" class="radio__input" name="radio-name">
                                             <div class="radio__state">
                                                 <div class="radio__control">
-                                                    <div class="control__circle"></div>  
+                                                    <div class="radio__circle"></div>  
                                                 </div>
                                                 <div class="radio__label">Default</div>
                                             </div>
@@ -115,7 +150,7 @@
                                             <input type="radio" class="radio__input" name="radio-name" checked>
                                             <div class="radio__state">
                                                 <div class="radio__control">
-                                                    <div class="control__circle"></div>
+                                                    <div class="radio__circle"></div>
                                                 </div>
                                                 <div class="radio__label">Selected</div>
                                             </div>
@@ -124,20 +159,19 @@
                                             <input type="radio" class="radio__input" name="radio-name" disabled>
                                             <div class="radio__state">
                                                 <div class="radio__control">
-                                                    <div class="control__circle"></div>
+                                                    <div class="radio__circle"></div>
                                                 </div>
                                                 <div class="radio__label">Disabled</div>
                                             </div>
                                         </label>
                                     </div>
-                                    
                                 </div>
                                 <div class="card__footer">
                                     <div class="card__title">Custom form elements</div>
                                     <div class="card__text">Element</div>
                                 </div>
-                            </div>
-                            <div class="card preview__card">
+                            </a>
+                            <a href="./pages/calendar.html" class="card preview__card">
                                 <div class="card__body">
                                     <div class="calendar calendar_size-small">
                                         <div class="calendar__title">October 2019</div>
@@ -193,29 +227,29 @@
                                    <div class="card__title">Calendar</div>
                                    <div class="card__text">Container</div>
                                 </div>
-                            </div>
-                            <div class="card preview__card">
+                            </a>
+                            <a href="./pages/modal.html" class="card preview__card">
                                 <div class="card__body">
-                                    <div class="modal modal_preview" id="modal">
+                                    <div class="modal modal_preview">
                                         <div class="modal__content modal__content_preview">
-                                            <label class="form-group form-group__content">
+                                            <label class="form-group form-group_modal">
                                                 <div class="form-group__title">Name</div>
                                                 <input type="text" class="form-group__input" placeholder="Placeholder">
                                                 <svg class="form-group__icon form-group__icon_success">
-                                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                                    <use xlink:href="./assets/icons/icons.svg#success"></svg>
                                                 </svg>
                                                 <svg class="form-group__icon form-group__icon_error">
-                                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                                    <use xlink:href="./assets/icons/icons.svg#error"></svg>
                                                 </svg> 
                                             </label>
-                                            <label class="form-group form-group__content">
+                                            <label class="form-group form-group_modal">
                                                 <div class="form-group__title">Email</div>
                                                 <input type="text" class="form-group__input" placeholder="Placeholder">
                                                 <svg class="form-group__icon form-group__icon_success">
-                                                    <use xlink:href="../../assets/icons/icons.svg#success"></svg>
+                                                    <use xlink:href="./assets/icons/icons.svg#success"></svg>
                                                 </svg>
                                                 <svg class="form-group__icon form-group__icon_error">
-                                                    <use xlink:href="../../assets/icons/icons.svg#error"></svg>
+                                                    <use xlink:href="./assets/icons/icons.svg#error"></svg>
                                                 </svg> 
                                             </label>
                                             <button class="button button_primary button_small">Submit</button>
@@ -226,46 +260,46 @@
                                     <div class="card__title">Modal dialog</div>
                                     <div class="card__text">Container</div>
                                 </div>
-                            </div>
-                            <div class="card preview__card">
+                            </a>
+                            <a href="pages/histogram.html" class="card preview__card">
                                 <div class="card__body">
                                     <div class="histogram histogram__block">
                                         <div class="histogram__header">
-                                            <div class="header__orders">Total orders</div>
-                                            <div class="header__view-control">View all</div>
+                                            <div class="histogram__orders">Total orders</div>
+                                            <div class="histogram__view-control">View all</div>
                                         </div>
-                                        <div class="header__counter">50254</div>
+                                        <div class="histogram__counter">50254</div>
                                         <div class="histogram__chart">
-                                            <div class="chart__column" style="height: 100%"></div>
-                                            <div class="chart__column" style="height: 70%"></div>
-                                            <div class="chart__column" style="height: 44%"></div>
-                                            <div class="chart__column" style="height: 78%"></div>
-                                            <div class="chart__column" style="height: 44%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 78%"></div>
-                                            <div class="chart__column" style="height: 100%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 44%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 70%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 100%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 78%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 44%"></div>
-                                            <div class="chart__column" style="height: 70%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 78%"></div>
-                                            <div class="chart__column" style="height: 70%"></div>
-                                            <div class="chart__column" style="height: 90%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 70%"></div>
-                                            <div class="chart__column" style="height: 34%"></div>
+                                            <div class="histogram__column" style="height: 100%"></div>
+                                            <div class="histogram__column" style="height: 70%"></div>
+                                            <div class="histogram__column" style="height: 44%"></div>
+                                            <div class="histogram__column" style="height: 78%"></div>
+                                            <div class="histogram__column" style="height: 44%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 78%"></div>
+                                            <div class="histogram__column" style="height: 100%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 44%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 70%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 100%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 78%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 44%"></div>
+                                            <div class="histogram__column" style="height: 70%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 78%"></div>
+                                            <div class="histogram__column" style="height: 70%"></div>
+                                            <div class="histogram__column" style="height: 90%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 70%"></div>
+                                            <div class="histogram__column" style="height: 34%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -273,8 +307,8 @@
                                     <div class="card__title">Histogram</div>
                                     <div class="card__text">Element</div>
                                 </div>
-                            </div>
-                            <div class="card preview__card">
+                            </a>
+                            <a href="pages/avatar.html" class="card preview__card">
                                 <div class="card__body">
                                     <div class="avatar">
                                         <img class="avatar__image" src="./assets/images/avatar-200.jpg" alt="avatar"> 
@@ -284,14 +318,14 @@
                                     <div class="card__title">Avatar</div>
                                     <div class="card__text">Element</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="tabs__content tabs__content_atoms preview">
                     <div class="page__box preview__box">
                         <div class="preview__card-wrapper">
-                            <div class="card preview__card">
+                            <a href="./pages/tooltip.html" class="card preview__card">
                                 <div class="card__body card__body_tooltip">
                                     <div class="tooltip">
                                         <svg class="tooltip__icon tooltip__icon_preview" width="24" height="24">
@@ -304,8 +338,8 @@
                                   <div class="card__title">Tooltip</div>
                                   <div class="card__text">Container</div>
                                 </div>
-                            </div>
-                            <div class="card preview__card">
+                            </a>
+                            <a href="./pages/avatar.html" class="card preview__card">
                                 <div class="card__body">
                                     <div class="avatar">
                                         <img class="avatar__image" src="./assets/images/avatar-200.jpg" alt="avatar"> 
@@ -315,7 +349,7 @@
                                     <div class="card__title">Avatar</div>
                                     <div class="card__text">Element</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="section">
                             <div class="section__title">Buttons</div>
@@ -337,7 +371,7 @@
                                     <input type="radio" class="radio__input" name="radio-name">
                                     <div class="radio__state">
                                         <div class="radio__control">
-                                            <div class="control__circle"></div>  
+                                            <div class="radio__circle"></div>  
                                         </div>
                                         <div class="radio__label">Male</div>
                                     </div>
@@ -346,7 +380,7 @@
                                     <input type="radio" class="radio__input" name="radio-name" checked>
                                     <div class="radio__state">
                                         <div class="radio__control">
-                                            <div class="control__circle"></div>
+                                            <div class="radio__circle"></div>
                                         </div>
                                         <div class="radio__label">Female</div>
                                     </div>
@@ -355,7 +389,7 @@
                                     <input type="radio" class="radio__input" name="radio-name" disabled>
                                     <div class="radio__state">
                                         <div class="radio__control">
-                                            <div class="control__circle"></div>
+                                            <div class="radio__circle"></div>
                                         </div>
                                         <div class="radio__label">Special</div>
                                     </div>
@@ -427,9 +461,9 @@
                 <div class="tabs__content tabs__content_molecules preview">
                     <div class="page__box preview__box">
                         <div class="preview__card-wrapper">
-                            <div class="card preview__card">
+                            <a href="./pages/customForm.html" class="card preview__card">
                                 <div class="card__body">
-                                    <div class="checkbox__grid">
+                                    <div class="form-group-grid">
                                         <label class="checkbox">
                                             <input type="checkbox" class="checkbox__input">
                                             <div class="checkbox__state">
@@ -467,7 +501,7 @@
                                             <input type="radio" class="radio__input" name="radio-name">
                                             <div class="radio__state">
                                                 <div class="radio__control">
-                                                    <div class="control__circle"></div>  
+                                                    <div class="radio__circle"></div>  
                                                 </div>
                                                 <div class="radio__label">Default</div>
                                             </div>
@@ -476,7 +510,7 @@
                                             <input type="radio" class="radio__input" name="radio-name" checked>
                                             <div class="radio__state">
                                                 <div class="radio__control">
-                                                    <div class="control__circle"></div>
+                                                    <div class="radio__circle"></div>
                                                 </div>
                                                 <div class="radio__label">Selected</div>
                                             </div>
@@ -485,7 +519,7 @@
                                             <input type="radio" class="radio__input" name="radio-name" disabled>
                                             <div class="radio__state">
                                                 <div class="radio__control">
-                                                    <div class="control__circle"></div>
+                                                    <div class="radio__circle"></div>
                                                 </div>
                                                 <div class="radio__label">Disabled</div>
                                             </div>
@@ -496,8 +530,8 @@
                                     <div class="card__title">Custom form elements</div>
                                     <div class="card__text">Element</div>
                                 </div>
-                            </div>
-                            <div class="card preview__card">
+                            </a>
+                            <a href="./pages/calendar.html" class="card preview__card">
                                 <div class="card__body">
                                     <div class="calendar calendar_size-small">
                                         <div class="calendar__title">October 2019</div>
@@ -553,7 +587,7 @@
                                    <div class="card__title">Calendar</div>
                                    <div class="card__text">Container</div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="section">
                             <div class="section__title">Sceleton</div>
@@ -576,7 +610,7 @@
                         <div class="section">
                             <div class="section__title">Custom form elements</div>
                             <div class="section__content">
-                                <label class="form-group form-group">
+                                <label class="form-group">
                                     <div class="form-group__title">Label</div>
                                     <input type="text" class="form-group__input">
                                     <div class="form-group__status">Some status</div>
@@ -616,18 +650,31 @@
                 <div class="tabs__content tabs__content_organisms preview">
                     <div class="page__box preview__box">
                         <div class="preview__card-wrapper">
-                            <div class="card preview__card">
+                            <a href="./pages/modal.html" class="card preview__card">
                                 <div class="card__body">
-                                    <div class="modal" id="modal">
-                                        <div class="modal__content">
-                                            <h3 class="modal__title">Modal title</h3>
-                                            <p class="modal__description">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                                                Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                                                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.Velit officia consequat duis enim velit mollit.
-                                                Exercitation veniam consequat sunt nostrud amet.</p>
-                                            <svg class="modal__button" id="modal-close">
-                                                <use xlink:href="./assets/icons/icons.svg#cross"></use>
-                                            </svg>
+                                    <div class="modal modal_preview">
+                                        <div class="modal__content modal__content_preview">
+                                            <label class="form-group form-group_modal">
+                                                <div class="form-group__title">Name</div>
+                                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                                <svg class="form-group__icon form-group__icon_success">
+                                                    <use xlink:href="./assets/icons/icons.svg#success"></svg>
+                                                </svg>
+                                                <svg class="form-group__icon form-group__icon_error">
+                                                    <use xlink:href="./assets/icons/icons.svg#error"></svg>
+                                                </svg> 
+                                            </label>
+                                            <label class="form-group form-group_modal">
+                                                <div class="form-group__title">Email</div>
+                                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                                <svg class="form-group__icon form-group__icon_success">
+                                                    <use xlink:href="./assets/icons/icons.svg#success"></svg>
+                                                </svg>
+                                                <svg class="form-group__icon form-group__icon_error">
+                                                    <use xlink:href="./assets/icons/icons.svg#error"></svg>
+                                                </svg> 
+                                            </label>
+                                            <button class="button button_primary button_small">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -635,46 +682,46 @@
                                     <div class="card__title">Modal dialog</div>
                                     <div class="card__text">Container</div>
                                 </div>
-                            </div>
-                            <div class="card preview__card">
+                            </a>
+                            <a href="./pages/histogram.html" class="card preview__card">
                                 <div class="card__body">
                                     <div class="histogram histogram__block">
                                         <div class="histogram__header">
-                                            <div class="header__orders">Total orders</div>
-                                            <div class="header__view-control">View all</div>
+                                            <div class="histogram__orders">Total orders</div>
+                                            <div class="histogram__view-control">View all</div>
                                         </div>
-                                        <div class="header__counter">50254</div>
+                                        <div class="histogram__counter">50254</div>
                                         <div class="histogram__chart">
-                                            <div class="chart__column" style="height: 100%"></div>
-                                            <div class="chart__column" style="height: 70%"></div>
-                                            <div class="chart__column" style="height: 44%"></div>
-                                            <div class="chart__column" style="height: 78%"></div>
-                                            <div class="chart__column" style="height: 44%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 78%"></div>
-                                            <div class="chart__column" style="height: 100%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 44%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 70%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 100%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 78%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 44%"></div>
-                                            <div class="chart__column" style="height: 70%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 78%"></div>
-                                            <div class="chart__column" style="height: 70%"></div>
-                                            <div class="chart__column" style="height: 90%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 60%"></div>
-                                            <div class="chart__column" style="height: 22%"></div>
-                                            <div class="chart__column" style="height: 70%"></div>
-                                            <div class="chart__column" style="height: 34%"></div>
+                                            <div class="histogram__column" style="height: 100%"></div>
+                                            <div class="histogram__column" style="height: 70%"></div>
+                                            <div class="histogram__column" style="height: 44%"></div>
+                                            <div class="histogram__column" style="height: 78%"></div>
+                                            <div class="histogram__column" style="height: 44%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 78%"></div>
+                                            <div class="histogram__column" style="height: 100%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 44%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 70%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 100%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 78%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 44%"></div>
+                                            <div class="histogram__column" style="height: 70%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 78%"></div>
+                                            <div class="histogram__column" style="height: 70%"></div>
+                                            <div class="histogram__column" style="height: 90%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 60%"></div>
+                                            <div class="histogram__column" style="height: 22%"></div>
+                                            <div class="histogram__column" style="height: 70%"></div>
+                                            <div class="histogram__column" style="height: 34%"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -682,18 +729,100 @@
                                     <div class="card__title">Histogram</div>
                                     <div class="card__text">Element</div>
                                 </div>
+                            </a>
+                        </div>
+                        <div class="section">
+                            <div class="section__title">Modal</div>
+                            <div class="section__content_full-height">
+                                <div class="section__component">
+                                    <button class="button button_primary" id="modal-open">Open modal</button>
+                                    <div class="modal" id="modal">
+                                        <div class="modal__content">
+                                            <label class="form-group">
+                                                <div class="form-group__title">Name</div>
+                                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                                <svg class="form-group__icon form-group__icon_success">
+                                                    <use xlink:href="./assets/icons/icons.svg#success"></svg>
+                                                </svg>
+                                                <svg class="form-group__icon form-group__icon_error">
+                                                    <use xlink:href="./assets/icons/icons.svg#error"></svg>
+                                                </svg> 
+                                            </label>
+                                            <label class="form-group">
+                                                <div class="form-group__title">Email</div>
+                                                <input type="text" class="form-group__input" placeholder="Placeholder">
+                                                <svg class="form-group__icon form-group__icon_success">
+                                                    <use xlink:href="./assets/icons/icons.svg#success"></svg>
+                                                </svg>
+                                                <svg class="form-group__icon form-group__icon_error">
+                                                    <use xlink:href="./assets/icons/icons.svg#error"></svg>
+                                                </svg> 
+                                            </label>
+                                            <button class="button button_primary">Submit</button>
+                                            <svg class="modal__button-icon" id="modal-close">
+                                                <use xlink:href="./assets/icons/icons.svg#cross"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="section__title">Accordion</div>
+                            <div class="section__content">
+                                <div class="accordion">
+                                    <details class="accordion__item" open>
+                                        <summary class="accordion__item-title accordion__summary">
+                                            Accordion item 1
+                                            <svg class="accordion__summary-arrow">
+                                                <use xlink:href="./assets/icons/icons.svg#arrow"></use>
+                                            </svg>             
+                                        </summary>
+                                        <p class="accordion__item-body">
+                                            Amet minim mollit non ullamco est sit aliqua dolor do amet sint.
+                                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                    <details class="accordion__item">
+                                        <summary class="accordion__item-title accordion__summary">
+                                            Accordion item 2
+                                            <svg class="accordion__summary-arrow">
+                                                <use xlink:href="./assets/icons/icons.svg#arrow"></use>
+                                            </svg>  
+                                        </summary>
+                                        <p class="accordion__item-body">
+                                            Amet minim mollit non ullamco est sit aliqua dolor do amet sint.
+                                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                    <details class="accordion__item">
+                                        <summary class="accordion__item-title accordion__summary">
+                                            Accordion item 3
+                                            <svg class="accordion__summary-arrow">
+                                                <use xlink:href="./assets/icons/icons.svg#arrow"></use>
+                                            </svg>  
+                                        </summary>
+                                        <p class="accordion__item-body">
+                                            Amet minim mollit non ullamco est sit aliqua dolor do amet sint.
+                                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                        </p>
+                                    </details>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
             <footer class="footer">
-                <div class="page__box">
+                <div class="page__box page__box_footer">
                     <h2 class="footer__title">About</h2>
                     <p class="footer__description">This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects.
                         Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.</p>
                 </div>
             </footer>  
         </div>
+        <script defer src="./assets/scripts/theme-changer.js"></script>
+        <script src="./assets/scripts/modal.js"></script>
+        <script src="./assets/scripts/burger-menu.js"></script>
     </body>
 </html>

@@ -2,80 +2,289 @@
 <html lang="ru">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../assets/css/normalize.css">
-        <link rel="stylesheet" href="../assets/css/main.css">
-        <link rel="stylesheet" href="../pages/template.css">
-        <link rel="stylesheet" href="../components/nav/nav.css">
-        <link rel="stylesheet" href="../components/logo/logo.css">
-        <link rel="stylesheet" href="../components/histogram/histogram.css">
+        <link rel="stylesheet" href="../build/index.css">
+        <link rel="stylesheet" href="../build/template.css">
     </head>
     <body>
-        <div class="page">
-            <div class="page__spacing"></div>
-            <div class="page__header">
-                <div class="header__logo logo__wrapper">
-                    <div class="logo__square"></div>
-                    <div class="logo__circle"></div>
-                    <div class="logo__triangle"></div>
-                </div>
-            </div>
-            <div class="page__spacing"></div>
-            <div class="page__nav">
-                <div class="nav__item nav__item_title">Components</div>
-                <div class="nav__item">Modal</div>
-                <div class="nav__item">Tooltip</div>
-                <div class="nav__item">Avatar</div>
-                <div class="nav__item">Calendar</div>
-                <div class="nav__item nav__item_active">Histogram</div>
-                <div class="nav__item">Custom form elements</div>
-            </div>
-            <div class="page__content">
-                <div class="content__title">Histogram</div>
-                <div class="content__component">
-                    <div class="histogram">
-                        <div class="histogram__header">
-                            <div class="header__orders">Total orders</div>
-                            <div class="header__view-control">View all</div>
+        <div class="page page_template">
+            <header class="header header_template">
+                <div class="page__box">
+                    <div class="burger-menu-opener">
+                        <button class="burger-menu-opener__button" id="burger-menu-open">
+                            <svg class="burger-menu-opener__button-icon" id="menu">
+                                <use xlink:href="../assets/icons/icons.svg#menu"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="burger-menu" id="burger-menu">
+                        <div class="burger-menu__header">
+                            <div class="page__box">
+                                <button class="burger-menu__button burger-menu__button_close" id="burger-menu-close">
+                                    <svg class="burger-menu__button-icon menu__icon_close" id="c">
+                                        <use xlink:href="../assets/icons/icons.svg#crossBurger"></use>
+                                    </svg>
+                                </button>
+                                <div class="burger-menu__logo">
+                                    <svg class="burger-menu__logo-image">
+                                        <use xlink:href="../assets/icons/icons.svg#logo"></use>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                        <div class="header__counter">50254</div>
-                        <div class="histogram__chart">
-                            <div class="chart__column" style="height: 100%"></div>
-                            <div class="chart__column" style="height: 70%"></div>
-                            <div class="chart__column" style="height: 44%"></div>
-                            <div class="chart__column" style="height: 78%"></div>
-                            <div class="chart__column" style="height: 44%"></div>
-                            <div class="chart__column" style="height: 60%"></div>
-                            <div class="chart__column" style="height: 78%"></div>
-                            <div class="chart__column" style="height: 100%"></div>
-                            <div class="chart__column" style="height: 22%"></div>
-                            <div class="chart__column" style="height: 44%"></div>
-                            <div class="chart__column" style="height: 60%"></div>
-                            <div class="chart__column" style="height: 70%"></div>
-                            <div class="chart__column" style="height: 22%"></div>
-                            <div class="chart__column" style="height: 100%"></div>
-                            <div class="chart__column" style="height: 22%"></div>
-                            <div class="chart__column" style="height: 78%"></div>
-                            <div class="chart__column" style="height: 60%"></div>
-                            <div class="chart__column" style="height: 44%"></div>
-                            <div class="chart__column" style="height: 70%"></div>
-                            <div class="chart__column" style="height: 60%"></div>
-                            <div class="chart__column" style="height: 22%"></div>
-                            <div class="chart__column" style="height: 78%"></div>
-                            <div class="chart__column" style="height: 70%"></div>
-                            <div class="chart__column" style="height: 90%"></div>
-                            <div class="chart__column" style="height: 60%"></div>
-                            <div class="chart__column" style="height: 22%"></div>
-                            <div class="chart__column" style="height: 60%"></div>
-                            <div class="chart__column" style="height: 22%"></div>
-                            <div class="chart__column" style="height: 70%"></div>
-                            <div class="chart__column" style="height: 34%"></div>
+                        <div class="burger-menu__body">
+                            <div class="burger-menu__section">
+                                <h4 class="burger-menu__section-title">Components</h4>
+                                <a href="./modal.html" class="burger-menu__section-link">Modal</a>
+                                <a href="./tooltip.html" class="burger-menu__section-link">Tooltip</a>
+                                <a href="./avatar.html" class="burger-menu__section-link">Avatar</a>
+                                <a href="./calendar.html" class="burger-menu__section-link">Calendar</a>
+                                <a href="./histogram.html" class="burger-menu__section-link burger-menu__section-link_active">Histogram</a>
+                                <a href="./customForm.html" class="burger-menu__section-link">Custom form elements</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__logo logo__wrapper">
+                        <a href="../index.html">
+                            <svg class="logo__image">
+                                <use xlink:href="../assets/icons/icons.svg#logo"></use>
+                            </svg>
+                        </a>
+                        <div class="theme-changer">
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../assets/icons/icons.svg#sun"></use>
+                            </svg>
+                            <label class="toggler theme-changer__toggler">
+                                <input type="checkbox" class="toggler__input" id="theme-changer">
+                                <div class="toggler__state">
+                                    <div class="toggler__control">
+                                        <div class="toggler__circle"></div>
+                                    </div>
+                                </div>
+                            </label>
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../assets/icons/icons.svg#moon"></use>
+                            </svg>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="page__spacing"></div>
-            <div class="page__footer">Reusable component library</div>
-            </div>
+            </header>
+            <main class="page__main">
+                <div class="page__box page__box_template">
+                    <div class="nav main__nav">
+                        <div class="nav__item nav__item_title">Components</div>
+                        <a href="./modal.html"><div class="nav__item">Modal</div></a>
+                        <a href="./tooltip.html"><div class="nav__item">Tooltip</div></a>
+                        <a href="./avatar.html"><div class="nav__item">Avatar</div></a>
+                        <a href="./calendar.html"><div class="nav__item">Calendar</div></a>
+                        <a href="./histogram.html"><div class="nav__item nav__item_active">Histogram</div></a>
+                        <a href="./customForm.html"><div class="nav__item">Custom form elements</div></a>
+                    </div>
+                    <div class="template-content main__template-content">
+                        <div class="template-content__title">Histogram</div>
+                        <div class="template-content__component">
+                            <div class="histogram">
+                                <div class="histogram__header">
+                                    <div class="histogram__orders">Total orders</div>
+                                    <div class="histogram__view-control">View all</div>
+                                </div>
+                                <div class="histogram__counter">50254</div>
+                                <div class="histogram__chart">
+                                    <div class="histogram__column" style="height: 100%"></div>
+                                    <div class="histogram__column" style="height: 70%"></div>
+                                    <div class="histogram__column" style="height: 44%"></div>
+                                    <div class="histogram__column" style="height: 78%"></div>
+                                    <div class="histogram__column" style="height: 44%"></div>
+                                    <div class="histogram__column" style="height: 60%"></div>
+                                    <div class="histogram__column" style="height: 78%"></div>
+                                    <div class="histogram__column" style="height: 100%"></div>
+                                    <div class="histogram__column" style="height: 22%"></div>
+                                    <div class="histogram__column" style="height: 44%"></div>
+                                    <div class="histogram__column" style="height: 60%"></div>
+                                    <div class="histogram__column" style="height: 70%"></div>
+                                    <div class="histogram__column" style="height: 22%"></div>
+                                    <div class="histogram__column" style="height: 100%"></div>
+                                    <div class="histogram__column" style="height: 22%"></div>
+                                    <div class="histogram__column" style="height: 78%"></div>
+                                    <div class="histogram__column" style="height: 60%"></div>
+                                    <div class="histogram__column" style="height: 44%"></div>
+                                    <div class="histogram__column" style="height: 70%"></div>
+                                    <div class="histogram__column" style="height: 60%"></div>
+                                    <div class="histogram__column" style="height: 22%"></div>
+                                    <div class="histogram__column" style="height: 78%"></div>
+                                    <div class="histogram__column" style="height: 70%"></div>
+                                    <div class="histogram__column" style="height: 90%"></div>
+                                    <div class="histogram__column" style="height: 60%"></div>
+                                    <div class="histogram__column" style="height: 22%"></div>
+                                    <div class="histogram__column" style="height: 60%"></div>
+                                    <div class="histogram__column" style="height: 22%"></div>
+                                    <div class="histogram__column" style="height: 70%"></div>
+                                    <div class="histogram__column" style="height: 34%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <input type="radio" id="#html-tab" name="nav" class="tabs__input tabs__input_html" checked>
+                            <input type="radio" id="#css-tab" name="nav" class="tabs__input tabs__input_css">
+                            <div class="tabs__nav page__box">
+                                <label for="#html-tab" class="nav__label nav__label_html">HTML</label>
+                                <label for="#css-tab" class="nav__label nav__label_css">CSS</label>
+                            </div>
+                            <section>
+                                <div class="tabs__divider"></div>
+                                <div class="tabs__content tabs__content_html">
+                                    <figure>
+                                        <pre>
+                                            <code class="language-html">
+&lt;div class="histogram"&gt;
+    &lt;div class="histogram__header"&gt;
+        &lt;div class="histogram__orders"&gt;Total orders&lt;/div&gt;
+        &lt;div class="histogram__view-control"&gt;View all&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="histogram__counter"&gt;50254&lt;/div&gt;
+    &lt;div class="histogram__chart"&gt;
+        &lt;div class="histogram__column" style="height: 100%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 70%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 44%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 78%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 44%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 78%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 100%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 44%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 70%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 100%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 78%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 44%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 70%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 78%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 70%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 90%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 60%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 22%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 70%"&gt;&lt;/div&gt;
+        &lt;div class="histogram__column" style="height: 34%"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                                <div class="tabs__content tabs__content_css">
+                                    <figure>
+                                        <pre>
+                                            <code class="language-css">
+.histogram {
+    box-sizing: border-box;
+    border: 1px solid var(--grey-3);
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px 24px;
+}
+
+.histogram__block {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+    
+.histogram__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.histogram__chart {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 39px;
+    animation: appear 0.6s ease-out;
+}
+
+@keyframes appear {
+    0% {
+        transform: scaleY(0);
+        transform-origin: bottom center;
+    }
+
+    50% {
+        transform: scaleY(0);
+        transform-origin: bottom center;
+    }
+
+    100% {
+        transform: scaleY(1);
+        transform-origin: bottom center;
+    }
+}
+
+.histogram__orders {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--secondary-font);
+    line-height: 24px;
+}
+            
+.histogram__view-control {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: var(--royal-blue);
+    line-height: 24px;
+}
+            
+.histogram__counter {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: var(--main-font);
+    line-height: 26px;
+}
+
+
+.histogram__column {
+    background-color: var(--royal-blue);
+    margin-top: auto;
+    margin-right: 1px;
+    flex-basis: 9px;
+    flex-grow: 1;
+}
+
+.histogram__column:last-child {
+    margin-right: 0px;
+}
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer footer_template">
+                <div class="page__box">
+                    <p class="footer__description footer__description_template">Reusable component library</p>
+                </div>
+            </footer>
         </div>
+        <script defer src="../assets/scripts/theme-changer.js"></script>
+        <script src="../assets/scripts/burger-menu.js"></script>
+        <script defer src="../assets/scripts/prism.js"></script>
     </body>
 </html>

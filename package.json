@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Course Materials",
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js"
+    "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js",
+    "build": "postcss assets/css/index.scss -o build/index.css",
+    "build-template": "postcss assets/css/template.scss -o build/template.css"
   },
   "husky": {
     "hooks": {
@@ -22,11 +24,17 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "cross-env": "^7.0.2",
-    "mocha": "^7.1.2"
+    "mocha": "^7.1.2",
+    "postcss-import": "^14.0.2"
   },
   "dependencies": {
+    "cssnano": "^5.0.16",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "postcss-scss": "^4.0.3",
+    "precss": "^4.0.0",
     "prettier": "^2.2.1"
   }
 }

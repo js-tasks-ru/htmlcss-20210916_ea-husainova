@@ -1,0 +1,28 @@
+.header {
+    &__title {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 50px;
+        line-height: 1.28;
+        color: var(--main-font);
+        margin-top: 16px;
+        margin-bottom: 32px;
+    }
+
+    &_template {
+        margin-bottom: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 25px 0px;
+    }
+
+    .header__title {
+        font-size: 28px;
+        font-weight: 400;
+        text-align: center;
+    }
+}

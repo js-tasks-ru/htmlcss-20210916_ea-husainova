@@ -1,45 +1,150 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
+        <style>
+            html {
+                background: var(--main-bg);
+            }
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../assets/css/normalize.css">
-        <link rel="stylesheet" href="../assets/css/main.css">
-        <link rel="stylesheet" href="../pages/template.css">
-        <link rel="stylesheet" href="../components/nav/nav.css">
-        <link rel="stylesheet" href="../components/logo/logo.css">
-        <link rel="stylesheet" href="../components/avatar/avatar.css">
+        <link rel="stylesheet" href="../build/index.css">
+        <link rel="stylesheet" href="../build/template.css">
     </head>
     <body>
-        <div class="page">
-            <div class="page__spacing"></div>
-            <div class="page__header">
-                <div class="header__logo logo__wrapper">
-                    <div class="logo__square"></div>
-                    <div class="logo__circle"></div>
-                    <div class="logo__triangle"></div>
-                </div>
-            </div>
-            <div class="page__spacing"></div>
-            <div class="page__nav">
-                <div class="nav__item nav__item_title">Components</div>
-                <div class="nav__item">Modal</div>
-                <div class="nav__item">Tooltip</div>
-                <div class="nav__item nav__item_active">Avatar</div>
-                <div class="nav__item">Calendar</div>
-                <div class="nav__item">Histogram</div>
-                <div class="nav__item">Custom form elements</div>
-            </div>
-            <div class="page__content">
-                <div class="content__title">Avatar</div>
-                <div class="content__component">
-                    <div class="avatar">
-                        <img class="avatar__image" src="../assets/images/avatar-200.jpg" alt="avatar"> 
+        <div class="page page_template">
+            <header class="header header_template">
+                <div class="page__box">
+                    <div class="burger-menu-opener">
+                        <button class="burger-menu-opener__button" id="burger-menu-open">
+                            <svg class="burger-menu-opener__button-icon" id="menu">
+                                <use xlink:href="../assets/icons/icons.svg#menu"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="burger-menu" id="burger-menu">
+                        <div class="burger-menu__header">
+                            <div class="page__box">
+                                <button class="burger-menu__button burger-menu__button_close" id="burger-menu-close">
+                                    <svg class="burger-menu__button-icon menu__icon_close">
+                                        <use xlink:href="../assets/icons/icons.svg#crossBurger"></use>
+                                    </svg>
+                                </button>
+                                <div class="burger-menu__logo">
+                                    <svg class="burger-menu__logo-imagee">
+                                        <use xlink:href="../assets/icons/icons.svg#logo"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="burger-menu__body">
+                            <div class="burger-menu__section">
+                                <h4 class="burger-menu__section-title">Components</h4>
+                                <a href="./modal.html" class="burger-menu__section-link">Modal</a>
+                                <a href="./tooltip.html" class="burger-menu__section-link">Tooltip</a>
+                                <a href="./avatar.html" class="burger-menu__section-link burger-menu__section-link_active">Avatar</a>
+                                <a href="./calendar.html" class="burger-menu__section-link">Calendar</a>
+                                <a href="./histogram.html" class="burger-menu__section-link">Histogram</a>
+                                <a href="./customForm.html" class="burger-menu__section-link">Custom form elements</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__logo logo__wrapper">
+                        <a href="../index.html">
+                            <svg class="logo__image">
+                                <use xlink:href="../assets/icons/icons.svg#logo"></use>
+                            </svg>
+                        </a>
+                        <div class="theme-changer">
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../assets/icons/icons.svg#sun"></use>
+                            </svg>
+                            <label class="toggler theme-changer__toggler">
+                                <input type="checkbox" class="toggler__input" id="theme-changer">
+                                <div class="toggler__state">
+                                    <div class="toggler__control">
+                                        <div class="toggler__circle"></div>
+                                    </div>
+                                </div>
+                            </label>
+                            <svg class="theme-changer__icon">
+                                <use xlink:href="../assets/icons/icons.svg#moon"></use>
+                            </svg>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="page__spacing"></div>
-            <div class="page__footer">Reusable component library</div>
-            </div>
+            </header>
+            <main class="main page__main">
+                <div class="page__box page__box_template">
+                    <div class="nav main__nav">
+                        <div class="nav__item nav__item_title">Components</div>
+                        <a href="./modal.html"><div class="nav__item">Modal</div></a>
+                        <a href="./tooltip.html"><div class="nav__item">Tooltip</div></a>
+                        <a href="./avatar.html"><div class=" nav__item nav__item_active">Avatar</div></a>
+                        <a href="./calendar.html"><div class="nav__item">Calendar</div></a>
+                        <a href="./histogram.html"><div class="nav__item">Histogram</div></a>
+                        <a href="./customForm.html"><div class="nav__item">Custom form elements</div></a>
+                    </div>
+                    <div class="template-content main__template-content">
+                        <div class="template-content__title">Avatar</div>
+                        <div class="template-content__component">
+                            <div class="avatar">
+                                <img class="avatar__image" src="../assets/images/avatar-200.jpg" alt="avatar"> 
+                            </div>
+                        </div>
+                        <div class="tabs">
+                            <input type="radio" id="#html-tab" name="nav" class="tabs__input tabs__input_html" checked>
+                            <input type="radio" id="#css-tab" name="nav" class="tabs__input tabs__input_css">
+                            <div class="tabs__nav page__box">
+                                <label for="#html-tab" class="nav__label nav__label_html">HTML</label>
+                                <label for="#css-tab" class="nav__label nav__label_css">CSS</label>
+                            </div>
+                            <section>
+                                <div class="tabs__divider"></div>
+                                <div class="tabs__content tabs__content_html">
+                                    <figure>
+                                        <pre>
+                                            <code class="language-html">
+&lt;div class="avatar"&gt;
+    &lt;img class="avatar__image" src="../assets/images/avatar-200.jpg" alt="avatar"&gt; 
+&lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                                <div class="tabs__content tabs__content_css">
+                                    <figure>
+                                        <pre>
+                                            <code class="language-css">
+.avatar {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+
+.avatar__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+                                            </code>
+                                        </pre>
+                                    </figure>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="footer footer_template">
+                <div class="page__box">
+                    <p class="footer__description footer__description_template">Reusable component library</p>
+                </div>
+            </footer>
         </div>
+        <script defer src="../assets/scripts/theme-changer.js"></script>
+        <script src="../assets/scripts/burger-menu.js"></script>
+        <script defer src="../assets/scripts/prism.js"></script>
     </body>
 </html>
